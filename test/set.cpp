@@ -1,61 +1,44 @@
 #include <vector>
-#include <string>
 #include <cassert>
+#include <iostream>
 
 #include "set.h"
 
-const std::vector<bool> t_bool = {true, false};
-const std::vector<int> t_int = {1, 2, 3, 4, 5};
-const std::vector<char> t_char = {'a', 'A', 'b', 'B', '\\', '\n'};
-const std::vector<float> t_float = {1.0, 2.0, 3.0, 4.0, 5.0};
-const std::vector<double> t_double = {1.0, 2.0, 3.0, 4.0, 5.0};
-const std::vector<std::string> t_string = {"Test", "test", "TEST"};
-
-bool test_contains() {
-    if (!set::contains(t_bool, true) || !set::contains(t_bool, false)) {return false;}
-    if (!set::contains(t_int, 1) || !set::contains(t_int, 5)) {return false;}
-    if (!set::contains(t_char, 'a') || !set::contains(t_char, 'B') || !set::contains(t_char, '\\') || !set::contains(t_char, '\n')) {return false;}
-    if (!set::contains(t_float, (float) 1.0) || !set::contains(t_float, (float) 5.0)) {return false;}
-    if (!set::contains(t_double, 1.0) || !set::contains(t_double, 5.0)) {return false;}
-    if (!set::contains(t_string, (std::string) "Test") || !set::contains(t_string, (std::string) "test")|| !set::contains(t_string, (std::string) "TEST")) {return false;}
-
-    return true;
-}
-
-bool test_count() {
-
-    return true;
-}
-
-bool test_union() {
-
-    return true;
-}
-
-bool test_intersection() {
-    
-    return true;
-}
-
-bool test_difference() {
-    
-    return true;
-}
-
-bool test_symmetric_difference() {
-    
-    return true;
-}
-
-
 int main() {
-    assert(test_contains() && "Contains failed!");
-    assert(test_count() && "Count failed!");
+    std::vector<int> r, t, tt, rr;
 
-    assert(test_union() && "Set union failed!");
-    assert(test_intersection() && "Set intersection failed!");
-    assert(test_difference() && "Set difference failed!");
-    assert(test_symmetric_difference() && "Set symmetric difference failed!");
+    t = {0, 0, 1, 0, 0};
+    assert(set::contains(t, 1) && "Contains failed with lvalue vector!");
+    assert((!set::contains({0, 0, 1, 0, 0}, 2)) && "Contains failed with rvalue vector!");
 
+    t = {0, 0, 1, 0, 0};
+    assert((set::count(t, 0) == 4) && "Count failed with lvalue vector!");
+    assert((set::count({0, 0, 1, 0, 0}, 1) == 1) && "Count failed with rvalue vector!");
+
+    r = {}, t = {0, 0, 1, 0, 0}, rr = {0, 1};
+    assert((set::unique(r, t) == rr) && "Unique failed with lvalue vector!");
+    assert((set::unique(r, t) == ((std::vector<int>) {0,1})) && "Unique failed with rvalue vector!");
+
+    r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2, 3, 4, 5};
+    set::sunion(r, t, tt);
+    assert((r == rr) && "Union failed with lvalue vector!");
+    assert((r == ((std::vector<int>) {1, 2, 3, 4, 5})) && "Union failed with rvalue vector!");
+
+    r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {3};
+    set::sintersection(r, t, tt);
+    assert((r == rr) && "Intersection failed with lvalue vector!");
+    assert((r == ((std::vector<int>) {3})) && "Intersection failed with rvalue vector!");
+
+    r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2};
+    set::diff(r, t, tt);
+    assert((r == rr) && "Difference failed with lvalue vector!");
+    assert((r == ((std::vector<int>) {1, 2})) && "Difference failed with rvalue vector!");
+
+    r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2, 4, 5};
+    set::sdiff(r, t, tt);
+    assert((r == rr) && "Symmetric difference failed with lvalue vector!");
+    assert((r == ((std::vector<int>) {1, 2, 4, 5})) && "Symmetric difference failed with rvalue vector!");
+
+    std::cout << "All tests passed smoothly!" << std::endl;
     return 0;
 }
