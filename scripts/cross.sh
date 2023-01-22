@@ -5,7 +5,7 @@ git commit -m "Cross compilation executed"
 cd ./bin
 meson dist
 cd ./win
-meson dist
+meson dist -R zip
 mkdir -v ../../dist/
 cp -r ./meson-dist/* ../../dist/
 cd ..
