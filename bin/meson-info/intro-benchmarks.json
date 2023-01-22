@@ -1,1 +1,0 @@
-[{"cmd": ["/home/kopi/GitHub/CSet++/bin/benchmark_set"], "env": {}, "name": "benchmarks", "workdir": null, "timeout": 30, "suite": ["CSet++"], "is_parallel": false, "priority": 0, "protocol": "exitcode", "depends": ["benchmark_set@exe"]}]
