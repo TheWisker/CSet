@@ -24,7 +24,7 @@ const T &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '73';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Checks if an element is present in the set.
@@ -58,7 +58,7 @@ const T &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '82';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Counts the number of times an element is present in the set.
@@ -91,7 +91,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'k';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '91';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Removes duplicates from a set.
@@ -135,7 +135,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '101';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory union of two sets.
@@ -180,7 +180,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '111';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory intersection of two sets.
@@ -225,7 +225,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '121';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory difference of two sets.
@@ -270,7 +270,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '131';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory symmetric difference of two sets.
@@ -289,7 +289,7 @@ _EnD_oF_dEf_TeXt_;
     };
     }; /* func-member */
     };
-  file-full-name  = '/home/kopi/GitHub/CSet++/include/set.h';
+  file-full-name  = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 This is the main header file of the cset library. It contains all the functions and their implementation.
@@ -318,7 +318,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'msg';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/benchmark/set.cpp';
       func-mem-desc-line = '23';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Manages the std::cout resource between simultaneously running threads.
@@ -359,7 +359,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'n';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/benchmark/set.cpp';
       func-mem-desc-line = '43';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Manages the benchmarking of a passed function.
@@ -384,7 +384,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'main';
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/benchmark/set.cpp';
       func-mem-desc-line = '63';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Main entry point that runs a benchmark for every library method.
@@ -444,7 +444,7 @@ _EnD_oF_dEf_TeXt_;
 std::mutex
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'out';
-      var-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      var-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/benchmark/set.cpp';
       var-mem-desc-line = '18';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The std::mutex object that locks the std::cout resource.
@@ -454,7 +454,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+  file-full-name  = '/home/kopi/GitHub/Archived/CSet++/benchmark/set.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library's performance.
@@ -477,7 +477,7 @@ file = {
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'main';
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/test/set.cpp';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/test/set.cpp';
       func-mem-desc-line = '16';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Runs all the tests.
@@ -522,7 +522,7 @@ _EnD_oF_dEf_TeXt_;
     };
     }; /* func-member */
     };
-  file-full-name  = '/home/kopi/GitHub/CSet++/test/set.cpp';
+  file-full-name  = '/home/kopi/GitHub/Archived/CSet++/test/set.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 This is the main test file of the cset library. It contains all the test needed to assure that the library works properly.
@@ -558,7 +558,7 @@ const T &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '73';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Checks if an element is present in the set.
@@ -592,7 +592,7 @@ const T &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '82';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Counts the number of times an element is present in the set.
@@ -625,7 +625,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'k';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '91';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Removes duplicates from a set.
@@ -669,7 +669,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '101';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory union of two sets.
@@ -714,7 +714,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '111';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory intersection of two sets.
@@ -759,7 +759,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '121';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory difference of two sets.
@@ -804,7 +804,7 @@ const std::vector< T > &
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kk';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-file = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
       func-mem-desc-line = '131';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Obtains the set theory symmetric difference of two sets.
@@ -823,7 +823,7 @@ _EnD_oF_dEf_TeXt_;
     };
     }; /* func-member */
     };
-  ns-filename  = '/home/kopi/GitHub/CSet++/include/set.h';
+  ns-filename  = '/home/kopi/GitHub/Archived/CSet++/include/set.h';
   ns-fileline  = '59';
   ns-briefdesc = <<_EnD_oF_dEf_TeXt_
 Contains all the functions for performing set operations on std::vector.

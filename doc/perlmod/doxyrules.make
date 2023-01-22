@@ -1,8 +1,8 @@
-DOXY_EXEC_PATH = /home/kopi/GitHub/CSet++
-DOXYFILE = /home/kopi/GitHub/CSet++/doxygen.conf
-DOXYDOCS_PM = /home/kopi/GitHub/CSet++/./doc/perlmod/DoxyDocs.pm
-DOXYSTRUCTURE_PM = /home/kopi/GitHub/CSet++/./doc/perlmod/DoxyStructure.pm
-DOXYRULES = /home/kopi/GitHub/CSet++/./doc/perlmod/doxyrules.make
+DOXY_EXEC_PATH = /home/kopi/GitHub/Archived/CSet++
+DOXYFILE = /home/kopi/GitHub/Archived/CSet++/doxygen.conf
+DOXYDOCS_PM = /home/kopi/GitHub/Archived/CSet++/./doc/perlmod/DoxyDocs.pm
+DOXYSTRUCTURE_PM = /home/kopi/GitHub/Archived/CSet++/./doc/perlmod/DoxyStructure.pm
+DOXYRULES = /home/kopi/GitHub/Archived/CSet++/./doc/perlmod/doxyrules.make
 
 .PHONY: clean-perlmod
 clean-perlmod::

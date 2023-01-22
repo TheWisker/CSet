@@ -134,7 +134,7 @@ namespace set {
 //Set contains
 template <typename T>
 inline bool set::contains(const std::vector<T>& k, const T& kk) noexcept {
-    for (T v: k) {if(v == kk) {return true;}}
+    for (const T& v: k) {if(v == kk) {return true;}}
     return false;
 };
 
@@ -142,37 +142,37 @@ inline bool set::contains(const std::vector<T>& k, const T& kk) noexcept {
 template <typename T>
 inline int set::count(const std::vector<T>& k, const T& kk) noexcept {
     int c = 0;
-    for (T v: k) {if(v == kk) {c++;}}
+    for (const T& v: k) {if(v == kk) {c++;}}
     return c;
 };
 
 //Set unique
 template <typename T>
 inline std::vector<T>& set::unique(std::vector<T>& c, const std::vector<T>& k) {
-    for (T v: k) {if(!set::contains(c, v)) {c.push_back(v);}}
+    for (const T& v: k) {if(!set::contains(c, v)) {c.push_back(v);}}
     return c;
 };
 
 //Set theory: Union
 template <typename T>
 inline std::vector<T>& set::sunion(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk) {
-    for (T v: k) {if(!set::contains(c, v)) {c.push_back(v);}}
-    for (T vv: kk) {if(!set::contains(c, vv)) {c.push_back(vv);}}
+    for (const T& v: k) {if(!set::contains(c, v)) {c.push_back(v);}}
+    for (const T& vv: kk) {if(!set::contains(c, vv)) {c.push_back(vv);}}
     return c;
 };
 
 //Set theory: Intersection
 template <typename T>
 inline std::vector<T>& set::intersection(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk) {
-    for (T v: k) {if((!set::contains(c, v)) && (set::contains(kk, v))) {c.push_back(v);}}
-    for (T vv: kk) {if((!set::contains(c, vv)) && (set::contains(k, vv))) {c.push_back(vv);}}
+    for (const T& v: k) {if((!set::contains(c, v)) && (set::contains(kk, v))) {c.push_back(v);}}
+    for (const T& vv: kk) {if((!set::contains(c, vv)) && (set::contains(k, vv))) {c.push_back(vv);}}
     return c;
 };
 
 //Set theory: Difference
 template <typename T>
 inline std::vector<T>& set::diff(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk) {
-    for (T v: k) {if(!contains(kk, v)) {c.push_back(v);}}
+    for (const T& v: k) {if(!contains(kk, v)) {c.push_back(v);}}
     return c;
 };
 
