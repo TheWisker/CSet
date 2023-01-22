@@ -1,0 +1,53 @@
+\hypertarget{test_2set_8cpp}{}\doxysection{test/set.cpp File Reference}
+\label{test_2set_8cpp}\index{test/set.cpp@{test/set.cpp}}
+
+
+This is the main test file of the cset library. It contains all the test needed to assure that the library works properly.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Runs all the tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main test file of the cset library. It contains all the test needed to assure that the library works properly. 
+
+This file contains the main function with asserts that every library method works as it should.~\newline
+Each method gets tested with two asserts that verify that the library method returns the expected value when performing an operation.~\newline
+If it doesn\textquotesingle{}t then a message gets printed to the console describing the error. If this does happen open an issue on my github page. 
+
+Definition in file \mbox{\hyperlink{test_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{set.cpp@{set.cpp}!main@{main}}
+\index{main@{main}!set.cpp@{set.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs all the tests. 
+
+\begin{DoxyReturn}{Returns}
+(int) Returns 0 to specify to Meson that the tests finished correctly 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{test_2set_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{test_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00136}{set\+::contains()}}, \mbox{\hyperlink{set_8h_source_l00143}{set\+::count()}}, \mbox{\hyperlink{set_8h_source_l00174}{set\+::diff()}}, \mbox{\hyperlink{set_8h_source_l00166}{set\+::intersection()}}, \mbox{\hyperlink{set_8h_source_l00181}{set\+::sdiff()}}, \mbox{\hyperlink{set_8h_source_l00158}{set\+::sunion()}}, and \mbox{\hyperlink{set_8h_source_l00151}{set\+::unique()}}.
+

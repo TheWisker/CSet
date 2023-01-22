@@ -1,0 +1,272 @@
+\hypertarget{namespaceset}{}\doxysection{set Namespace Reference}
+\label{namespaceset}\index{set@{set}}
+
+
+Contains all the functions for performing set operations on std\+::vector.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{contains}} (const std\+::vector$<$ T $>$ \&k, const T \&kk) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if an element is present in the set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{count}} (const std\+::vector$<$ T $>$ \&k, const T \&kk) noexcept
+\begin{DoxyCompactList}\small\item\em Counts the number of times an element is present in the set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{unique}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Removes duplicates from a set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{sunion}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory union of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{intersection}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory intersection of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{diff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{sdiff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory symmetric difference of two sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all the functions for performing set operations on std\+::vector. 
+
+The set namespace contains functions for performing common set operations on std\+::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}\label{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}} 
+\index{set@{set}!contains@{contains}}
+\index{contains@{contains}!set@{set}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool set\+::contains (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const T \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if an element is present in the set. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The input set. \\
+\hline
+{\em kk} & The element to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(true) If kk is present in k. 
+
+(false) If kk is not present in k. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00136}{136}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\mbox{\Hypertarget{namespaceset_ac5365eb686589aa9064bab275539177a}\label{namespaceset_ac5365eb686589aa9064bab275539177a}} 
+\index{set@{set}!count@{count}}
+\index{count@{count}!set@{set}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int set\+::count (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const T \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Counts the number of times an element is present in the set. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The input set. \\
+\hline
+{\em kk} & The element to count. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) The number of times kk was found in k. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00143}{143}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\mbox{\Hypertarget{namespaceset_a37f2c9c18fda658d3fb86550e519e773}\label{namespaceset_a37f2c9c18fda658d3fb86550e519e773}} 
+\index{set@{set}!diff@{diff}}
+\index{diff@{diff}!set@{set}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ \& set\+::diff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{c,  }\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const std\+::vector$<$ T $>$ \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains the set theory difference of two sets. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The set on which to store the results. \\
+\hline
+{\em k} & The first input set. \\
+\hline
+{\em kk} & The second input set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$\+T$>$\&) A reference to the passed vector c. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00174}{174}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00136}{contains()}}.
+
+\mbox{\Hypertarget{namespaceset_abbfdb13d235a0b18b76350266fe35645}\label{namespaceset_abbfdb13d235a0b18b76350266fe35645}} 
+\index{set@{set}!intersection@{intersection}}
+\index{intersection@{intersection}!set@{set}}
+\doxysubsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ \& set\+::intersection (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{c,  }\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const std\+::vector$<$ T $>$ \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains the set theory intersection of two sets. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The set on which to store the results. \\
+\hline
+{\em k} & The first input set. \\
+\hline
+{\em kk} & The second input set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$\+T$>$\&) A reference to the passed vector c. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00166}{166}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00136}{contains()}}.
+
+\mbox{\Hypertarget{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}\label{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}} 
+\index{set@{set}!sdiff@{sdiff}}
+\index{sdiff@{sdiff}!set@{set}}
+\doxysubsubsection{\texorpdfstring{sdiff()}{sdiff()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ \& set\+::sdiff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{c,  }\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const std\+::vector$<$ T $>$ \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains the set theory symmetric difference of two sets. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The set on which to store the results. \\
+\hline
+{\em k} & The first input set. \\
+\hline
+{\em kk} & The second input set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$\+T$>$\&) A reference to the passed vector c. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00181}{181}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00174}{diff()}}.
+
+\mbox{\Hypertarget{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}\label{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}} 
+\index{set@{set}!sunion@{sunion}}
+\index{sunion@{sunion}!set@{set}}
+\doxysubsubsection{\texorpdfstring{sunion()}{sunion()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ \& set\+::sunion (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{c,  }\item[{const std\+::vector$<$ T $>$ \&}]{k,  }\item[{const std\+::vector$<$ T $>$ \&}]{kk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains the set theory union of two sets. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The set on which to store the results. \\
+\hline
+{\em k} & The first input set. \\
+\hline
+{\em kk} & The second input set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$\+T$>$\&) A reference to the passed vector c. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00158}{158}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00136}{contains()}}.
+
+\mbox{\Hypertarget{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}\label{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}} 
+\index{set@{set}!unique@{unique}}
+\index{unique@{unique}!set@{set}}
+\doxysubsubsection{\texorpdfstring{unique()}{unique()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ \& set\+::unique (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{c,  }\item[{const std\+::vector$<$ T $>$ \&}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes duplicates from a set. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ The type of the elements in the set. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The set on which to store the results. \\
+\hline
+{\em k} & The input set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$\+T$>$\&) A reference to the passed vector c. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00151}{151}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+
+
+References \mbox{\hyperlink{set_8h_source_l00136}{contains()}}.
+

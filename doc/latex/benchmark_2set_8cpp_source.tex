@@ -1,0 +1,67 @@
+\hypertarget{benchmark_2set_8cpp_source}{}\doxysection{set.\+cpp}
+\label{benchmark_2set_8cpp_source}\index{benchmark/set.cpp@{benchmark/set.cpp}}
+\mbox{\hyperlink{benchmark_2set_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00018}\mbox{\hyperlink{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}{00018}}\ std::mutex\ \mbox{\hyperlink{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}{out}};}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00023}\mbox{\hyperlink{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}{print}}(std::string\ msg)\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ waiting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}(waiting)\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}{out}}.try\_lock())\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ msg\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}{out}}.unlock();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ waiting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(5));}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00043}\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(std::string\ name,\ std::function<\textcolor{keywordtype}{void}()>\ function,\ \textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00044}00044\ \ \ \ \ std::chrono::time\_point<std::chrono::high\_resolution\_clock>\ pstr,\ pend;}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00046}00046\ \ \ \ \ pstr\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{function();\}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00048}00048\ \ \ \ \ pend\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{auto}\ mstr\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(pstr).time\_since\_epoch().count();\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{auto}\ mend\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(pend).time\_since\_epoch().count();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{auto}\ nstr\ =\ std::chrono::time\_point\_cast<std::chrono::nanoseconds>(pstr).time\_since\_epoch().count();\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{auto}\ nend\ =\ std::chrono::time\_point\_cast<std::chrono::nanoseconds>(pend).time\_since\_epoch().count();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}{print}}(\textcolor{stringliteral}{"{}Benchmark\ "{}}\ +\ name\ +\ \textcolor{stringliteral}{"{}:\ "{}}\ +\ std::to\_string(mend\ -\/\ mstr)\ +\ \textcolor{stringliteral}{"{}ms\ -\/\ "{}}\ +\ std::to\_string(nend\ -\/\ nstr)\ +\ \textcolor{stringliteral}{"{}ns"{}});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00063}\mbox{\hyperlink{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00063}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00064}00064\ \ \ \ \ std::vector<int>\ t;\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00066}00066\ \ \ \ \ std::thread\ contains([]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Contains"{}},\ []()\ \{\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(\{0,\ 0,\ 1,\ 0,\ 0\},\ 1);\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00067}00067\ \ \ \ \ std::thread\ count([]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Count"{}},\ []()\ \{\mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set::count}}(\{0,\ 0,\ 1,\ 0,\ 0\},\ 0);\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00068}00068\ \ \ \ \ std::thread\ unique([\&t]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Unique"{}},\ [\&t]()\ \{\mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(t,\ \{0,\ 0,\ 1,\ 0,\ 0\});\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00069}00069\ \ \ \ \ std::thread\ sunion([\&t]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Union"{}},\ [\&t]()\ \{\mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(t,\ \{1,\ 2,\ 3\},\ \{3,\ 4,\ 5\});\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00070}00070\ \ \ \ \ std::thread\ sintersection([\&t]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Intersection"{}},\ [\&t]()\ \{\mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(t,\ \{1,\ 2,\ 3\},\ \{3,\ 4,\ 5\});\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00071}00071\ \ \ \ \ std::thread\ diff([\&t]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Difference"{}},\ [\&t]()\ \{\mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(t,\ \{1,\ 2,\ 3\},\ \{3,\ 4,\ 5\});\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00072}00072\ \ \ \ \ std::thread\ sdiff([\&t]()\ \{\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}(\textcolor{stringliteral}{"{}Symmetric\ difference"{}},\ [\&t]()\ \{\mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(t,\ \{1,\ 2,\ 3\},\ \{3,\ 4,\ 5\});\},\ 1000);\});}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00074}00074\ \ \ \ \ contains.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00075}00075\ \ \ \ \ count.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00076}00076\ \ \ \ \ unique.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00077}00077\ \ \ \ \ sunion.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00078}00078\ \ \ \ \ sintersection.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00079}00079\ \ \ \ \ diff.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00080}00080\ \ \ \ \ sdiff.join();}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{benchmark_2set_8cpp_source_l00083}00083\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\hypertarget{index_intro}{}\doxysection{Introduction}\label{index_intro}
+This is a simple project that aims to provide some simple and fast methods for working with mathematical sets on std\+::vectors.~\newline
+At the moment it only includes a handful of functions in the set namespace. The library may be expanded at a future time depending on my needs.~\newline
+ \hypertarget{index_install}{}\doxysection{Installation}\label{index_install}
+The project comes with a folder with some bash files that complete some Meson related tasks.~\newline
+All bash files must be executed from the project\textquotesingle{}s root directory to work properly.~\newline
+To install the project, there is only need to execute two of them files.~\newline
+Once installed just include the \mbox{\hyperlink{set_8h}{set.\+h}} header file in your code.\hypertarget{index_step1}{}\doxysubsection{Step one\+: Setup the Project}\label{index_step1}
+To setup the Meson project run the setup.\+sh bash file\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bash\ ./scripts/setup.sh}
+
+\end{DoxyCode}
+\hypertarget{index_step2}{}\doxysubsection{Step two\+: Install the Library}\label{index_step2}
+To install the cset library run the install.\+sh bash file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bash\ ./scripts/install.sh}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+You will need a privileged user\textquotesingle{}s credentials
+\end{DoxyNote}
+\hypertarget{index_test}{}\doxysection{Testing}\label{index_test}
+The project comes with some test files located in the test folder.~\newline
+To test that the library code works properly run the following bash file\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bash\ ./scripts/test.sh}
+
+\end{DoxyCode}
+\hypertarget{index_benchmark}{}\doxysection{Benchmarking}\label{index_benchmark}
+The project comes with some benchmark files located in the benchmark folder.~\newline
+To benchmark every library function in microseconds and nanoseconds run the following bash file\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bash\ ./scripts/\mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}}.sh}
+
+\end{DoxyCode}
+ 

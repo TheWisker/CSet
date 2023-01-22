@@ -1,0 +1,834 @@
+AutoGen Definitions dummy;
+file = {
+  file-id   = 'set_8h';
+  file-name = 'set.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'contains';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const T &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '73';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Checks if an element is present in the set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param k The input set.
+@param kk The element to check for.
+@return (true) If kk is present in k.
+@return (false) If kk is not present in k.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ac5365eb686589aa9064bab275539177a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'count';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const T &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '82';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Counts the number of times an element is present in the set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param k The input set.
+@param kk The element to count.
+@return (int) The number of times kk was found in k.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'unique';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '91';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes duplicates from a set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sunion';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '101';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory union of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1abbfdb13d235a0b18b76350266fe35645';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'intersection';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '111';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory intersection of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a37f2c9c18fda658d3fb86550e519e773';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'diff';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '121';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory difference of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a9e1d205dc88719374276b5bd73fc13b6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sdiff';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '131';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory symmetric difference of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a37f2c9c18fda658d3fb86550e519e773';
+        func-mem-ref-line = '174';
+        func-mem-ref-name = 'set::diff';
+    };
+    }; /* func-member */
+    };
+  file-full-name  = '/home/kopi/GitHub/CSet++/include/set.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This is the main header file of the cset library. It contains all the functions and their implementation.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+ This file contains a set of functions that perform set theory operations on std::vector.\n
+The functions are implemented as templates to support multiple types without the need to overload each function for each type.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'benchmark_2set_8cpp';
+  file-name = 'set.cpp';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'print';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::string
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'msg';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-line = '23';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Manages the std::cout resource between simultaneously running threads.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param msg The string to print to the console.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'out';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'benchmark';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::string
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::function< void()>
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'function';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'n';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-line = '43';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Manages the benchmarking of a passed function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param name The name of the benchmark to print to the console.
+@param function The function object to benchmark.
+@param n The number of times to run the function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4';
+        func-mem-ref-line = '23';
+        func-mem-ref-name = 'print';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      func-mem-desc-line = '63';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Main entry point that runs a benchmark for every library method.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return (int) Returns 0 to ensure that all the benchmarks where executed flawlessly.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee';
+        func-mem-ref-line = '43';
+        func-mem-ref-name = 'benchmark';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ac5365eb686589aa9064bab275539177a';
+        func-mem-ref-line = '143';
+        func-mem-ref-name = 'set::count';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a37f2c9c18fda658d3fb86550e519e773';
+        func-mem-ref-line = '174';
+        func-mem-ref-name = 'set::diff';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1abbfdb13d235a0b18b76350266fe35645';
+        func-mem-ref-line = '166';
+        func-mem-ref-name = 'set::intersection';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a9e1d205dc88719374276b5bd73fc13b6';
+        func-mem-ref-line = '181';
+        func-mem-ref-name = 'set::sdiff';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ad0fdcd2362fa264e9d23cba85ccec05c';
+        func-mem-ref-line = '158';
+        func-mem-ref-name = 'set::sunion';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ac883181c654d551576c3ee2d1a0fa7fa';
+        func-mem-ref-line = '151';
+        func-mem-ref-name = 'set::unique';
+    };
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+std::mutex
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'out';
+      var-mem-desc-file = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+      var-mem-desc-line = '18';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+The std::mutex object that locks the std::cout resource.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/kopi/GitHub/CSet++/benchmark/set.cpp';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library's performance.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+ This file contains some functions that run benchmarks on different threads.\n
+Each function gets executed a thousand times and then the execution time gets printed to the console.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'test_2set_8cpp';
+  file-name = 'set.cpp';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'test_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/test/set.cpp';
+      func-mem-desc-line = '16';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Runs all the tests.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return (int) Returns 0 to specify to Meson that the tests finished correctly
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'set::contains';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ac5365eb686589aa9064bab275539177a';
+        func-mem-ref-line = '143';
+        func-mem-ref-name = 'set::count';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a37f2c9c18fda658d3fb86550e519e773';
+        func-mem-ref-line = '174';
+        func-mem-ref-name = 'set::diff';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1abbfdb13d235a0b18b76350266fe35645';
+        func-mem-ref-line = '166';
+        func-mem-ref-name = 'set::intersection';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a9e1d205dc88719374276b5bd73fc13b6';
+        func-mem-ref-line = '181';
+        func-mem-ref-name = 'set::sdiff';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ad0fdcd2362fa264e9d23cba85ccec05c';
+        func-mem-ref-line = '158';
+        func-mem-ref-name = 'set::sunion';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1ac883181c654d551576c3ee2d1a0fa7fa';
+        func-mem-ref-line = '151';
+        func-mem-ref-name = 'set::unique';
+    };
+    }; /* func-member */
+    };
+  file-full-name  = '/home/kopi/GitHub/CSet++/test/set.cpp';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This is the main test file of the cset library. It contains all the test needed to assure that the library works properly.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+ This file contains the main function with asserts that every library method works as it should.\n
+Each method gets tested with two asserts that verify that the library method returns the expected value when performing an operation.\n
+If it doesn't then a message gets printed to the console describing the error. If this does happen open an issue on my github page.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+  namespace = {
+    ns-id   = 'namespaceset';
+    ns-name = 'set';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'contains';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const T &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '73';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Checks if an element is present in the set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param k The input set.
+@param kk The element to check for.
+@return (true) If kk is present in k.
+@return (false) If kk is not present in k.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ac5365eb686589aa9064bab275539177a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'count';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const T &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '82';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Counts the number of times an element is present in the set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param k The input set.
+@param kk The element to count.
+@return (int) The number of times kk was found in k.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'unique';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '91';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes duplicates from a set.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sunion';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '101';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory union of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1abbfdb13d235a0b18b76350266fe35645';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'intersection';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '111';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory intersection of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a37f2c9c18fda658d3fb86550e519e773';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'diff';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '121';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory difference of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a980a97ee29ca68fb5b0ff49c22317a7e';
+        func-mem-ref-line = '136';
+        func-mem-ref-name = 'contains';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespaceset_1a9e1d205dc88719374276b5bd73fc13b6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sdiff';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const std::vector< T > &
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kk';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/kopi/GitHub/CSet++/include/set.h';
+      func-mem-desc-line = '131';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obtains the set theory symmetric difference of two sets.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@tparam T - The type of the elements in the set.
+@param c The set on which to store the results.
+@param k The first input set.
+@param kk The second input set.
+@return (std::vector<T>&) A reference to the passed vector c.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'set_8h_1a37f2c9c18fda658d3fb86550e519e773';
+        func-mem-ref-line = '174';
+        func-mem-ref-name = 'diff';
+    };
+    }; /* func-member */
+    };
+  ns-filename  = '/home/kopi/GitHub/CSet++/include/set.h';
+  ns-fileline  = '59';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+Contains all the functions for performing set operations on std::vector.
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+ The set namespace contains functions for performing common set operations on std::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations.
+_EnD_oF_dEf_TeXt_;
+  };

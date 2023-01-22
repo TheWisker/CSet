@@ -1,0 +1,132 @@
+\hypertarget{benchmark_2set_8cpp}{}\doxysection{benchmark/set.cpp File Reference}
+\label{benchmark_2set_8cpp}\index{benchmark/set.cpp@{benchmark/set.cpp}}
+
+
+This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library\textquotesingle{}s performance.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}{print}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Manages the std\+::cout resource between simultaneously running threads. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}{benchmark}} (std\+::string name, std\+::function$<$ void()$>$ function, int n)
+\begin{DoxyCompactList}\small\item\em Manages the benchmarking of a passed function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main entry point that runs a benchmark for every library method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}{out}}
+\begin{DoxyCompactList}\small\item\em The std\+::mutex object that locks the std\+::cout resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library\textquotesingle{}s performance. 
+
+This file contains some functions that run benchmarks on different threads.~\newline
+Each function gets executed a thousand times and then the execution time gets printed to the console. 
+
+Definition in file \mbox{\hyperlink{benchmark_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}\label{benchmark_2set_8cpp_a41101af7fad907dc7f66ee08548b23ee}} 
+\index{set.cpp@{set.cpp}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!set.cpp@{set.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark()}{benchmark()}}
+{\footnotesize\ttfamily void benchmark (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::function$<$ void()$>$}]{function,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Manages the benchmarking of a passed function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the benchmark to print to the console. \\
+\hline
+{\em function} & The function object to benchmark. \\
+\hline
+{\em n} & The number of times to run the function. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{benchmark_2set_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{benchmark_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{benchmark_2set_8cpp_source_l00023}{print()}}.
+
+\mbox{\Hypertarget{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{set.cpp@{set.cpp}!main@{main}}
+\index{main@{main}!set.cpp@{set.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main entry point that runs a benchmark for every library method. 
+
+\begin{DoxyReturn}{Returns}
+(int) Returns 0 to ensure that all the benchmarks where executed flawlessly. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{benchmark_2set_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{benchmark_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{benchmark_2set_8cpp_source_l00043}{benchmark()}}, \mbox{\hyperlink{set_8h_source_l00136}{set\+::contains()}}, \mbox{\hyperlink{set_8h_source_l00143}{set\+::count()}}, \mbox{\hyperlink{set_8h_source_l00174}{set\+::diff()}}, \mbox{\hyperlink{set_8h_source_l00166}{set\+::intersection()}}, \mbox{\hyperlink{set_8h_source_l00181}{set\+::sdiff()}}, \mbox{\hyperlink{set_8h_source_l00158}{set\+::sunion()}}, and \mbox{\hyperlink{set_8h_source_l00151}{set\+::unique()}}.
+
+\mbox{\Hypertarget{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}\label{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}} 
+\index{set.cpp@{set.cpp}!print@{print}}
+\index{print@{print}!set.cpp@{set.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Manages the std\+::cout resource between simultaneously running threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The string to print to the console. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{benchmark_2set_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{benchmark_2set_8cpp_source}{set.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{benchmark_2set_8cpp_source_l00018}{out}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}\label{benchmark_2set_8cpp_a8b63d9cfb464ec3956b2124708f4ee7b}} 
+\index{set.cpp@{set.cpp}!out@{out}}
+\index{out@{out}!set.cpp@{set.cpp}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily std\+::mutex out}
+
+
+
+The std\+::mutex object that locks the std\+::cout resource. 
+
+
+
+Definition at line \mbox{\hyperlink{benchmark_2set_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{benchmark_2set_8cpp_source}{set.\+cpp}}.
+

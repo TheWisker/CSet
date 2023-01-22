@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_benchmark_2set_8cpp" xml:lang="en-US">
+<title>benchmark/set.cpp File Reference</title>
+<indexterm><primary>benchmark/set.cpp</primary></indexterm>
+<para>
+
+<para>This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library&apos;s performance. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;chrono&gt;<?linebreak?>#include &lt;thread&gt;<?linebreak?>#include &lt;functional&gt;<?linebreak?>#include &lt;mutex&gt;<?linebreak?>#include &quot;set.h&quot;<?linebreak?></programlisting>Include dependency graph for set.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="benchmark_2set_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4">print</link> (std::string msg)</para>
+
+<para>Manages the std::cout resource between simultaneously running threads. </para>
+</listitem>
+            <listitem><para>void <link linkend="_benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee">benchmark</link> (std::string name, std::function&lt; void()&gt; function, int n)</para>
+
+<para>Manages the benchmarking of a passed function. </para>
+</listitem>
+            <listitem><para>int <link linkend="_benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>Main entry point that runs a benchmark for every library method. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>std::mutex <link linkend="_benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b">out</link></para>
+
+<para>The std::mutex object that locks the std::cout resource. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library&apos;s performance. </para>
+
+<para>This file contains some functions that run benchmarks on different threads.<?linebreak?>Each function gets executed a thousand times and then the execution time gets printed to the console. </para>
+<para>
+Definition in file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee"/><section>
+    <title>benchmark()</title>
+<indexterm><primary>benchmark</primary><secondary>set.cpp</secondary></indexterm>
+<indexterm><primary>set.cpp</primary><secondary>benchmark</secondary></indexterm>
+<para><computeroutput>void benchmark (std::string name, std::function&lt; void()&gt; function, int n)</computeroutput></para><para>
+
+<para>Manages the benchmarking of a passed function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the benchmark to print to the console. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>function</entry><entry>
+<para>The function object to benchmark. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>n</entry><entry>
+<para>The number of times to run the function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_benchmark_2set_8cpp_source_1l00043">43</link> of file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
+<para>
+References <link linkend="_benchmark_2set_8cpp_source_1l00023">print()</link>.</para>
+</section>
+<anchor xml:id="_benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>set.cpp</secondary></indexterm>
+<indexterm><primary>set.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>Main entry point that runs a benchmark for every library method. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(int) Returns 0 to ensure that all the benchmarks where executed flawlessly. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_benchmark_2set_8cpp_source_1l00063">63</link> of file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
+<para>
+References <link linkend="_benchmark_2set_8cpp_source_1l00043">benchmark()</link>, <link linkend="_set_8h_source_1l00136">set::contains()</link>, <link linkend="_set_8h_source_1l00143">set::count()</link>, <link linkend="_set_8h_source_1l00174">set::diff()</link>, <link linkend="_set_8h_source_1l00166">set::intersection()</link>, <link linkend="_set_8h_source_1l00181">set::sdiff()</link>, <link linkend="_set_8h_source_1l00158">set::sunion()</link>, and <link linkend="_set_8h_source_1l00151">set::unique()</link>.</para>
+</section>
+<anchor xml:id="_benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4"/><section>
+    <title>print()</title>
+<indexterm><primary>print</primary><secondary>set.cpp</secondary></indexterm>
+<indexterm><primary>set.cpp</primary><secondary>print</secondary></indexterm>
+<para><computeroutput>void print (std::string msg)</computeroutput></para><para>
+
+<para>Manages the std::cout resource between simultaneously running threads. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The string to print to the console. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_benchmark_2set_8cpp_source_1l00023">23</link> of file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
+<para>
+References <link linkend="_benchmark_2set_8cpp_source_1l00018">out</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b"/><section>
+    <title>out</title>
+<indexterm><primary>out</primary><secondary>set.cpp</secondary></indexterm>
+<indexterm><primary>set.cpp</primary><secondary>out</secondary></indexterm>
+<para><computeroutput>std::mutex out</computeroutput></para><para>
+
+<para>The std::mutex object that locks the std::cout resource. </para>
+</para>
+<para>
+Definition at line <link linkend="_benchmark_2set_8cpp_source_1l00018">18</link> of file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
+</section>
+</section>
+</section>

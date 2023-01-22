@@ -1,0 +1,49 @@
+\hypertarget{test_2set_8cpp_source}{}\doxysection{set.\+cpp}
+\label{test_2set_8cpp_source}\index{test/set.cpp@{test/set.cpp}}
+\mbox{\hyperlink{test_2set_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00016}\mbox{\hyperlink{test_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00016}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{benchmark_2set_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00017}00017\ \ \ \ \ std::vector<int>\ r,\ t,\ tt,\ rr;}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00019}00019\ \ \ \ \ t\ =\ \{0,\ 0,\ 1,\ 0,\ 0\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00020}00020\ \ \ \ \ assert(\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(t,\ 1)\ \&\&\ \textcolor{stringliteral}{"{}Contains\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00021}00021\ \ \ \ \ assert((!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(\{0,\ 0,\ 1,\ 0,\ 0\},\ 2))\ \&\&\ \textcolor{stringliteral}{"{}Contains\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00023}00023\ \ \ \ \ t\ =\ \{0,\ 0,\ 1,\ 0,\ 0\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00024}00024\ \ \ \ \ assert((\mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set::count}}(t,\ 0)\ ==\ 4)\ \&\&\ \textcolor{stringliteral}{"{}Count\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00025}00025\ \ \ \ \ assert((\mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set::count}}(\{0,\ 0,\ 1,\ 0,\ 0\},\ 1)\ ==\ 1)\ \&\&\ \textcolor{stringliteral}{"{}Count\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00027}00027\ \ \ \ \ r\ =\ \{\},\ t\ =\ \{0,\ 0,\ 1,\ 0,\ 0\},\ rr\ =\ \{0,\ 1\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00028}00028\ \ \ \ \ assert((\mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(r,\ t)\ ==\ rr)\ \&\&\ \textcolor{stringliteral}{"{}Unique\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00029}00029\ \ \ \ \ assert((\mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(r,\ t)\ ==\ ((std::vector<int>)\ \{0,1\}))\ \&\&\ \textcolor{stringliteral}{"{}Unique\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00031}00031\ \ \ \ \ r\ =\ \{\},\ t\ =\ \{1,\ 2,\ 3\},\ tt\ =\ \{3,\ 4,\ 5\},\ rr\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(r,\ t,\ tt);}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00033}00033\ \ \ \ \ assert((r\ ==\ rr)\ \&\&\ \textcolor{stringliteral}{"{}Union\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00034}00034\ \ \ \ \ assert((r\ ==\ ((std::vector<int>)\ \{1,\ 2,\ 3,\ 4,\ 5\}))\ \&\&\ \textcolor{stringliteral}{"{}Union\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00036}00036\ \ \ \ \ r\ =\ \{\},\ t\ =\ \{1,\ 2,\ 3\},\ tt\ =\ \{3,\ 4,\ 5\},\ rr\ =\ \{3\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(r,\ t,\ tt);}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00038}00038\ \ \ \ \ assert((r\ ==\ rr)\ \&\&\ \textcolor{stringliteral}{"{}Intersection\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00039}00039\ \ \ \ \ assert((r\ ==\ ((std::vector<int>)\ \{3\}))\ \&\&\ \textcolor{stringliteral}{"{}Intersection\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00041}00041\ \ \ \ \ r\ =\ \{\},\ t\ =\ \{1,\ 2,\ 3\},\ tt\ =\ \{3,\ 4,\ 5\},\ rr\ =\ \{1,\ 2\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(r,\ t,\ tt);}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00043}00043\ \ \ \ \ assert((r\ ==\ rr)\ \&\&\ \textcolor{stringliteral}{"{}Difference\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00044}00044\ \ \ \ \ assert((r\ ==\ ((std::vector<int>)\ \{1,\ 2\}))\ \&\&\ \textcolor{stringliteral}{"{}Difference\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00046}00046\ \ \ \ \ r\ =\ \{\},\ t\ =\ \{1,\ 2,\ 3\},\ tt\ =\ \{3,\ 4,\ 5\},\ rr\ =\ \{1,\ 2,\ 4,\ 5\};}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(r,\ t,\ tt);}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00048}00048\ \ \ \ \ assert((r\ ==\ rr)\ \&\&\ \textcolor{stringliteral}{"{}Symmetric\ difference\ failed\ with\ lvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00049}00049\ \ \ \ \ assert((r\ ==\ ((std::vector<int>)\ \{1,\ 2,\ 4,\ 5\}))\ \&\&\ \textcolor{stringliteral}{"{}Symmetric\ difference\ failed\ with\ rvalue\ vector!"{}});}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00051}00051\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}All\ tests\ passed\ smoothly!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{test_2set_8cpp_source_l00053}00053\ \}}
+
+\end{DoxyCode}

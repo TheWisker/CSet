@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="benchmark_2set_8cpp" kind="file" language="C++">
+    <compoundname>set.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">mutex</includes>
+    <includes refid="set_8h" local="yes">set.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>benchmark/set.cpp</label>
+        <link refid="benchmark_2set_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>set.h</label>
+        <link refid="set_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>mutex</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>thread</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+<para>The std::mutex object that locks the std::cout resource. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="benchmark/set.cpp" line="18" column="12" bodyfile="benchmark/set.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>(std::string msg)</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Manages the std::cout resource between simultaneously running threads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to print to the console. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="benchmark/set.cpp" line="23" column="6" bodyfile="benchmark/set.cpp" bodystart="23" bodyend="35"/>
+        <references refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" compoundref="benchmark_2set_8cpp" startline="18">out</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void benchmark</definition>
+        <argsstring>(std::string name, std::function&lt; void()&gt; function, int n)</argsstring>
+        <name>benchmark</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Manages the benchmarking of a passed function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the benchmark to print to the console. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function object to benchmark. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of times to run the function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="benchmark/set.cpp" line="43" column="6" bodyfile="benchmark/set.cpp" bodystart="43" bodyend="57"/>
+        <references refid="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" compoundref="benchmark_2set_8cpp" startline="23" endline="35">print</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+<para>Main entry point that runs a benchmark for every library method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>(int) Returns 0 to ensure that all the benchmarks where executed flawlessly. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="benchmark/set.cpp" line="63" column="5" bodyfile="benchmark/set.cpp" bodystart="63" bodyend="83"/>
+        <references refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" compoundref="benchmark_2set_8cpp" startline="43" endline="57">benchmark</references>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">set::contains</references>
+        <references refid="namespaceset_1ac5365eb686589aa9064bab275539177a" compoundref="set_8h" startline="143" endline="147">set::count</references>
+        <references refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" compoundref="set_8h" startline="174" endline="177">set::diff</references>
+        <references refid="namespaceset_1abbfdb13d235a0b18b76350266fe35645" compoundref="set_8h" startline="166" endline="170">set::intersection</references>
+        <references refid="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" compoundref="set_8h" startline="181" endline="185">set::sdiff</references>
+        <references refid="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" compoundref="set_8h" startline="158" endline="162">set::sunion</references>
+        <references refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" compoundref="set_8h" startline="151" endline="154">set::unique</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main benchmark file of the cset library. It contains all the benchmarks needed to test the library&apos;s performance. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains some functions that run benchmarks on different threads.<linebreak/>
+Each function gets executed a thousand times and then the execution time gets printed to the console. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="set_8h" kindref="compound">set.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" refkind="member"><highlight class="normal">std::mutex<sp/><ref refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" kindref="member">out</ref>;</highlight></codeline>
+<codeline lineno="23" refid="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" kindref="member">print</ref>(std::string<sp/>msg)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>waiting<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(waiting)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" kindref="member">out</ref>.try_lock())<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>msg<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" kindref="member">out</ref>.unlock();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waiting<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::milliseconds(5));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(std::string<sp/>name,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">()&gt;<sp/>function,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;<sp/>pstr,<sp/>pend;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>pstr<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{function();}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>pend<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mstr<sp/>=<sp/>std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(pstr).time_since_epoch().count();<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mend<sp/>=<sp/>std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(pend).time_since_epoch().count();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nstr<sp/>=<sp/>std::chrono::time_point_cast&lt;std::chrono::nanoseconds&gt;(pstr).time_since_epoch().count();<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nend<sp/>=<sp/>std::chrono::time_point_cast&lt;std::chrono::nanoseconds&gt;(pend).time_since_epoch().count();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;Benchmark<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(mend<sp/>-<sp/>mstr)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;ms<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(nend<sp/>-<sp/>nstr)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;ns&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>t;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>contains([]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Contains&quot;</highlight><highlight class="normal">,<sp/>[]()<sp/>{<ref refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" kindref="member">set::contains</ref>({0,<sp/>0,<sp/>1,<sp/>0,<sp/>0},<sp/>1);},<sp/>1000);});</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>count([]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Count&quot;</highlight><highlight class="normal">,<sp/>[]()<sp/>{<ref refid="namespaceset_1ac5365eb686589aa9064bab275539177a" kindref="member">set::count</ref>({0,<sp/>0,<sp/>1,<sp/>0,<sp/>0},<sp/>0);},<sp/>1000);});</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>unique([&amp;t]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Unique&quot;</highlight><highlight class="normal">,<sp/>[&amp;t]()<sp/>{<ref refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" kindref="member">set::unique</ref>(t,<sp/>{0,<sp/>0,<sp/>1,<sp/>0,<sp/>0});},<sp/>1000);});</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>sunion([&amp;t]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Union&quot;</highlight><highlight class="normal">,<sp/>[&amp;t]()<sp/>{<ref refid="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" kindref="member">set::sunion</ref>(t,<sp/>{1,<sp/>2,<sp/>3},<sp/>{3,<sp/>4,<sp/>5});},<sp/>1000);});</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>sintersection([&amp;t]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Intersection&quot;</highlight><highlight class="normal">,<sp/>[&amp;t]()<sp/>{<ref refid="namespaceset_1abbfdb13d235a0b18b76350266fe35645" kindref="member">set::intersection</ref>(t,<sp/>{1,<sp/>2,<sp/>3},<sp/>{3,<sp/>4,<sp/>5});},<sp/>1000);});</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>diff([&amp;t]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Difference&quot;</highlight><highlight class="normal">,<sp/>[&amp;t]()<sp/>{<ref refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" kindref="member">set::diff</ref>(t,<sp/>{1,<sp/>2,<sp/>3},<sp/>{3,<sp/>4,<sp/>5});},<sp/>1000);});</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>sdiff([&amp;t]()<sp/>{<ref refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kindref="member">benchmark</ref>(</highlight><highlight class="stringliteral">&quot;Symmetric<sp/>difference&quot;</highlight><highlight class="normal">,<sp/>[&amp;t]()<sp/>{<ref refid="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" kindref="member">set::sdiff</ref>(t,<sp/>{1,<sp/>2,<sp/>3},<sp/>{3,<sp/>4,<sp/>5});},<sp/>1000);});</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>contains.join();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>count.join();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>unique.join();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>sunion.join();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>sintersection.join();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>diff.join();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>sdiff.join();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="benchmark/set.cpp"/>
+  </compounddef>
+</doxygen>

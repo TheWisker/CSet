@@ -1,0 +1,246 @@
+.TH "set" 3 "Sun Jan 22 2023" "CSet++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+set \- Contains all the functions for performing set operations on std::vector\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > bool \fBcontains\fP (const std::vector< T > &k, const T &kk) noexcept"
+.br
+.RI "Checks if an element is present in the set\&. "
+.ti -1c
+.RI "template<typename T > int \fBcount\fP (const std::vector< T > &k, const T &kk) noexcept"
+.br
+.RI "Counts the number of times an element is present in the set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBunique\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBsunion\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBintersection\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBsdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains all the functions for performing set operations on std::vector\&. 
+
+The set namespace contains functions for performing common set operations on std::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > bool set::contains (const std::vector< T > & k, const T & kk)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Checks if an element is present in the set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The input set\&. 
+.br
+\fIkk\fP The element to check for\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(true) If kk is present in k\&. 
+.PP
+(false) If kk is not present in k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB136\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > int set::count (const std::vector< T > & k, const T & kk)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Counts the number of times an element is present in the set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The input set\&. 
+.br
+\fIkk\fP The element to count\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(int) The number of times kk was found in k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB143\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::diff (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB174\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > & set::intersection (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory intersection of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB166\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > & set::sdiff (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory symmetric difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB181\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBdiff()\fP\&.
+.SS "template<typename T > std::vector< T > & set::sunion (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory union of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB158\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > & set::unique (std::vector< T > & c, const std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Removes duplicates from a set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB151\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBcontains()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSet++ from the source code\&.

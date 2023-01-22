@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceset" xml:lang="en-US">
+<title>set Namespace Reference</title>
+<indexterm><primary>set</primary></indexterm>
+<para>
+
+<para>Contains all the functions for performing set operations on std::vector. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T &gt; </para><para>bool <link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">contains</link> (const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</para>
+
+<para>Checks if an element is present in the set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>int <link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">count</link> (const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</para>
+
+<para>Counts the number of times an element is present in the set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">unique</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</para>
+
+<para>Removes duplicates from a set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">sunion</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory union of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">intersection</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory intersection of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">diff</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory difference of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">sdiff</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory symmetric difference of two sets. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Contains all the functions for performing set operations on std::vector. </para>
+
+<para>The set namespace contains functions for performing common set operations on std::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e"/><section>
+    <title>contains()</title>
+<indexterm><primary>contains</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>contains</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool set::contains (const std::vector&lt; T &gt; &amp; k, const T &amp; kk)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Checks if an element is present in the set. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>k</entry><entry>
+<para>The input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The element to check for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(true) If kk is present in k. </para>
+
+<para>(false) If kk is not present in k. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00136">136</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1ac5365eb686589aa9064bab275539177a"/><section>
+    <title>count()</title>
+<indexterm><primary>count</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>count</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>int set::count (const std::vector&lt; T &gt; &amp; k, const T &amp; kk)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Counts the number of times an element is present in the set. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>k</entry><entry>
+<para>The input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The element to count. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(int) The number of times kk was found in k. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00143">143</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773"/><section>
+    <title>diff()</title>
+<indexterm><primary>diff</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>diff</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; &amp; set::diff (std::vector&lt; T &gt; &amp; c, const std::vector&lt; T &gt; &amp; k, const std::vector&lt; T &gt; &amp; kk)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Obtains the set theory difference of two sets. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>c</entry><entry>
+<para>The set on which to store the results. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>k</entry><entry>
+<para>The first input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The second input set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00174">174</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+<para>
+References <link linkend="_set_8h_source_1l00136">contains()</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1abbfdb13d235a0b18b76350266fe35645"/><section>
+    <title>intersection()</title>
+<indexterm><primary>intersection</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>intersection</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; &amp; set::intersection (std::vector&lt; T &gt; &amp; c, const std::vector&lt; T &gt; &amp; k, const std::vector&lt; T &gt; &amp; kk)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Obtains the set theory intersection of two sets. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>c</entry><entry>
+<para>The set on which to store the results. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>k</entry><entry>
+<para>The first input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The second input set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00166">166</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+<para>
+References <link linkend="_set_8h_source_1l00136">contains()</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6"/><section>
+    <title>sdiff()</title>
+<indexterm><primary>sdiff</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>sdiff</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; &amp; set::sdiff (std::vector&lt; T &gt; &amp; c, const std::vector&lt; T &gt; &amp; k, const std::vector&lt; T &gt; &amp; kk)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Obtains the set theory symmetric difference of two sets. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>c</entry><entry>
+<para>The set on which to store the results. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>k</entry><entry>
+<para>The first input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The second input set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00181">181</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+<para>
+References <link linkend="_set_8h_source_1l00174">diff()</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c"/><section>
+    <title>sunion()</title>
+<indexterm><primary>sunion</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>sunion</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; &amp; set::sunion (std::vector&lt; T &gt; &amp; c, const std::vector&lt; T &gt; &amp; k, const std::vector&lt; T &gt; &amp; kk)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Obtains the set theory union of two sets. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>c</entry><entry>
+<para>The set on which to store the results. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>k</entry><entry>
+<para>The first input set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>kk</entry><entry>
+<para>The second input set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00158">158</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+<para>
+References <link linkend="_set_8h_source_1l00136">contains()</link>.</para>
+</section>
+<anchor xml:id="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa"/><section>
+    <title>unique()</title>
+<indexterm><primary>unique</primary><secondary>set</secondary></indexterm>
+<indexterm><primary>set</primary><secondary>unique</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; &amp; set::unique (std::vector&lt; T &gt; &amp; c, const std::vector&lt; T &gt; &amp; k)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes duplicates from a set. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>- The type of the elements in the set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>c</entry><entry>
+<para>The set on which to store the results. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>k</entry><entry>
+<para>The input set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_set_8h_source_1l00151">151</link> of file <link linkend="_set_8h_source">set.h</link>.</para>
+<para>
+References <link linkend="_set_8h_source_1l00136">contains()</link>.</para>
+</section>
+</section>
+</section>

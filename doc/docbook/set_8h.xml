@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_set_8h" xml:lang="en-US">
+<title>include/set.h File Reference</title>
+<indexterm><primary>include/set.h</primary></indexterm>
+<para>
+
+<para>This is the main header file of the cset library. It contains all the functions and their implementation. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;vector&gt;<?linebreak?></programlisting>Include dependency graph for set.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="set_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="set_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceset">set</link></para>
+
+<para>Contains all the functions for performing set operations on std::vector. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T &gt; </para><para>bool <link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link> (const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</para>
+
+<para>Checks if an element is present in the set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>int <link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">set::count</link> (const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</para>
+
+<para>Counts the number of times an element is present in the set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</para>
+
+<para>Removes duplicates from a set. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory union of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory intersection of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory difference of two sets. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; &amp; <link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link> (std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</para>
+
+<para>Obtains the set theory symmetric difference of two sets. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This is the main header file of the cset library. It contains all the functions and their implementation. </para>
+
+<para>This file contains a set of functions that perform set theory operations on std::vector.<?linebreak?>The functions are implemented as templates to support multiple types without the need to overload each function for each type. </para>
+<para>
+Definition in file <link linkend="_set_8h_source">set.h</link>.</para>
+</section>
+</section>

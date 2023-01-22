@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespaceset" kind="namespace" language="C++">
+    <compoundname>set</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool set::contains</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</argsstring>
+        <name>contains</name>
+        <qualifiedname>set::contains</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Checks if an element is present in the set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to check for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(true) If kk is present in k. </para>
+</simplesect>
+<simplesect kind="return"><para>(false) If kk is not present in k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="73" column="29" bodyfile="include/set.h" bodystart="136" bodyend="139" declfile="include/set.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ac5365eb686589aa9064bab275539177a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int set::count</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const T &amp;kk) noexcept</argsstring>
+        <name>count</name>
+        <qualifiedname>set::count</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Counts the number of times an element is present in the set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(int) The number of times kk was found in k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="82" column="28" bodyfile="include/set.h" bodystart="143" bodyend="147" declfile="include/set.h" declline="82" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::unique</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>unique</name>
+        <qualifiedname>set::unique</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Removes duplicates from a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="91" column="36" bodyfile="include/set.h" bodystart="151" bodyend="154" declfile="include/set.h" declline="91" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::sunion</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>sunion</name>
+        <qualifiedname>set::sunion</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory union of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="101" column="36" bodyfile="include/set.h" bodystart="158" bodyend="162" declfile="include/set.h" declline="101" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1abbfdb13d235a0b18b76350266fe35645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::intersection</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>intersection</name>
+        <qualifiedname>set::intersection</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory intersection of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="111" column="36" bodyfile="include/set.h" bodystart="166" bodyend="170" declfile="include/set.h" declline="111" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::diff</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>diff</name>
+        <qualifiedname>set::diff</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="121" column="36" bodyfile="include/set.h" bodystart="174" bodyend="177" declfile="include/set.h" declline="121" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::sdiff</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>sdiff</name>
+        <qualifiedname>set::sdiff</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory symmetric difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="131" column="36" bodyfile="include/set.h" bodystart="181" bodyend="185" declfile="include/set.h" declline="131" declcolumn="36"/>
+        <references refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" compoundref="set_8h" startline="174" endline="177">diff</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains all the functions for performing set operations on std::vector. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The set namespace contains functions for performing common set operations on std::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations. </para>
+    </detaileddescription>
+    <location file="include/set.h" line="59" column="1"/>
+  </compounddef>
+</doxygen>

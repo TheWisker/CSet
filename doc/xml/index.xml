@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="namespaceset" kind="namespace"><name>set</name>
+    <member refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" kind="function"><name>contains</name></member>
+    <member refid="namespaceset_1ac5365eb686589aa9064bab275539177a" kind="function"><name>count</name></member>
+    <member refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" kind="function"><name>unique</name></member>
+    <member refid="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" kind="function"><name>sunion</name></member>
+    <member refid="namespaceset_1abbfdb13d235a0b18b76350266fe35645" kind="function"><name>intersection</name></member>
+    <member refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" kind="function"><name>diff</name></member>
+    <member refid="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" kind="function"><name>sdiff</name></member>
+  </compound>
+  <compound refid="set_8h" kind="file"><name>set.h</name>
+  </compound>
+  <compound refid="benchmark_2set_8cpp" kind="file"><name>set.cpp</name>
+    <member refid="benchmark_2set_8cpp_1a8b63d9cfb464ec3956b2124708f4ee7b" kind="variable"><name>out</name></member>
+    <member refid="benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4" kind="function"><name>print</name></member>
+    <member refid="benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee" kind="function"><name>benchmark</name></member>
+    <member refid="benchmark_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_2set_8cpp" kind="file"><name>set.cpp</name>
+    <member refid="test_2set_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_44cec6e3ea30e076b9313c4641539d9f" kind="dir"><name>benchmark</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

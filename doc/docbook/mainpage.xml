@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<section xml:id="_index_1intro">
+<title>Introduction</title>
+
+<para>This is a simple project that aims to provide some simple and fast methods for working with mathematical sets on std::vectors.<?linebreak?>At the moment it only includes a handful of functions in the set namespace. The library may be expanded at a future time depending on my needs.<?linebreak?> </para>
+</section>
+<section xml:id="_index_1install">
+<title>Installation</title>
+
+<para>The project comes with a folder with some bash files that complete some Meson related tasks.<?linebreak?>All bash files must be executed from the project&apos;s root directory to work properly.<?linebreak?>To install the project, there is only need to execute two of them files.<?linebreak?>Once installed just include the <link linkend="_set_8h">set.h</link> header file in your code.</para>
+<section xml:id="_index_1step1">
+<title>Step one: Setup the Project</title>
+
+<para>To setup the Meson project run the setup.sh bash file: <literallayout><computeroutput>bash&#32;./scripts/setup.sh
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_index_1step2">
+<title>Step two: Install the Library</title>
+
+<para>To install the cset library run the install.sh bash file:</para>
+
+<para><literallayout><computeroutput>bash&#32;./scripts/install.sh
+</computeroutput></literallayout></para>
+
+<para><note><title>Note</title>
+
+<para>You will need a privileged user&apos;s credentials</para>
+</note>
+</para>
+</section>
+</section>
+<section xml:id="_index_1test">
+<title>Testing</title>
+
+<para>The project comes with some test files located in the test folder.<?linebreak?>To test that the library code works properly run the following bash file: <literallayout><computeroutput>bash&#32;./scripts/test.sh
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_index_1benchmark">
+<title>Benchmarking</title>
+
+<para>The project comes with some benchmark files located in the benchmark folder.<?linebreak?>To benchmark every library function in microseconds and nanoseconds run the following bash file: <literallayout><computeroutput>bash&#32;./scripts/<link linkend="_benchmark_2set_8cpp_1a41101af7fad907dc7f66ee08548b23ee">benchmark</link>.sh
+</computeroutput></literallayout> </para>
+</section>
+</chapter>

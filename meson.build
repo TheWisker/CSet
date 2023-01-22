@@ -5,6 +5,7 @@ header_files = ['./include/set.h']
 #source_files = [''] #None
 test_files = ['./test/set.cpp']
 benchmark_files = ['./benchmark/set.cpp']
+man_files = ['./doc/man/man3/contains.3', './doc/man/man3/count.3', './doc/man/man3/diff.3', './doc/man/man3/intersection.3', './doc/man/man3/sdiff.3', './doc/man/man3/sunion.3', './doc/man/man3/unique.3']
 
 # Determine the system that is being built on
 if host_machine.system() in ['windows', 'mingw']
@@ -26,11 +27,16 @@ install_headers(files(header_files))
 
 #Add test file
 test = executable('test_set', files(test_files), include_directories: include)
-test('stest_set', test, is_parallel: true)
+test('tests', test, is_parallel: true)
 
 #Add benchmark file
-benchmark = executable('benchmark_cset', files(benchmark_files), include_directories: include)
-benchmark('sbenchmark_set', benchmark)
+benchmark = executable('benchmark_set', files(benchmark_files), include_directories: include)
+benchmark('benchmarks', benchmark)
+
+#Install the documentation and create a target
+#run_target('docs', command: ['doxygen', '@SOURCE_ROOT@/doxygen.conf'])
+run_command('doxygen', 'doxygen.conf', check: true)
+#install_man(files(man_files))
 
 #Print a summary of the build
 summary('Project', 'CSet++')

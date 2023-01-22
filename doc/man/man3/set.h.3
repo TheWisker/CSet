@@ -1,0 +1,64 @@
+.TH "include/set.h" 3 "Sun Jan 22 2023" "CSet++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/set.h \- This is the main header file of the cset library\&. It contains all the functions and their implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBset\fP"
+.br
+.RI "Contains all the functions for performing set operations on std::vector\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > bool \fBset::contains\fP (const std::vector< T > &k, const T &kk) noexcept"
+.br
+.RI "Checks if an element is present in the set\&. "
+.ti -1c
+.RI "template<typename T > int \fBset::count\fP (const std::vector< T > &k, const T &kk) noexcept"
+.br
+.RI "Counts the number of times an element is present in the set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::unique\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::sunion\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::intersection\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::diff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::sdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main header file of the cset library\&. It contains all the functions and their implementation\&. 
+
+This file contains a set of functions that perform set theory operations on std::vector\&.
+.br
+The functions are implemented as templates to support multiple types without the need to overload each function for each type\&. 
+.PP
+Definition in file \fBset\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSet++ from the source code\&.

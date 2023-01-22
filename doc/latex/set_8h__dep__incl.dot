@@ -1,0 +1,12 @@
+digraph "include/set.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="include/set.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This is the main header file of the cset library. It contains all the functions and their implementat..."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="benchmark/set.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$benchmark_2set_8cpp.html",tooltip="This is the main benchmark file of the cset library. It contains all the benchmarks needed to test th..."];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="test/set.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test_2set_8cpp.html",tooltip="This is the main test file of the cset library. It contains all the test needed to assure that the li..."];
+}

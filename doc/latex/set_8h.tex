@@ -1,0 +1,44 @@
+\hypertarget{set_8h}{}\doxysection{include/set.h File Reference}
+\label{set_8h}\index{include/set.h@{include/set.h}}
+
+
+This is the main header file of the cset library. It contains all the functions and their implementation.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for set.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceset}{set}}
+\begin{DoxyCompactList}\small\item\em Contains all the functions for performing set operations on std\+::vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set\+::contains}} (const std\+::vector$<$ T $>$ \&k, const T \&kk) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if an element is present in the set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set\+::count}} (const std\+::vector$<$ T $>$ \&k, const T \&kk) noexcept
+\begin{DoxyCompactList}\small\item\em Counts the number of times an element is present in the set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set\+::unique}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Removes duplicates from a set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set\+::sunion}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory union of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set\+::intersection}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory intersection of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set\+::diff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set\+::sdiff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory symmetric difference of two sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main header file of the cset library. It contains all the functions and their implementation. 
+
+This file contains a set of functions that perform set theory operations on std\+::vector.~\newline
+The functions are implemented as templates to support multiple types without the need to overload each function for each type. 
+
+Definition in file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+

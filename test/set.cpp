@@ -1,9 +1,18 @@
+/**
+* @file set.cpp
+* @brief This is the main test file of the cset library. It contains all the test needed to assure that the library works properly
+* @details This file contains the main function with asserts that every library method works as it should.\n
+* Each method gets tested with two asserts that verify that the library method returns the expected value when performing an operation.\n
+* If it doesn't then a message gets printed to the console describing the error. If this does happen open an issue on my github page.
+**/
 #include <vector>
 #include <cassert>
 #include <iostream>
-
 #include "set.h"
-
+/**
+* @brief Runs all the tests
+* @return (int) Returns 0 to specify to Meson that the tests finished correctly
+**/
 int main() {
     std::vector<int> r, t, tt, rr;
 
@@ -25,7 +34,7 @@ int main() {
     assert((r == ((std::vector<int>) {1, 2, 3, 4, 5})) && "Union failed with rvalue vector!");
 
     r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {3};
-    set::sintersection(r, t, tt);
+    set::intersection(r, t, tt);
     assert((r == rr) && "Intersection failed with lvalue vector!");
     assert((r == ((std::vector<int>) {3})) && "Intersection failed with rvalue vector!");
 

@@ -1,0 +1,57 @@
+.TH "test/set.cpp" 3 "Sun Jan 22 2023" "CSet++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/set.cpp \- This is the main test file of the cset library\&. It contains all the test needed to assure that the library works properly\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'set\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "Runs all the tests\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main test file of the cset library\&. It contains all the test needed to assure that the library works properly\&. 
+
+This file contains the main function with asserts that every library method works as it should\&.
+.br
+Each method gets tested with two asserts that verify that the library method returns the expected value when performing an operation\&.
+.br
+If it doesn't then a message gets printed to the console describing the error\&. If this does happen open an issue on my github page\&. 
+.PP
+Definition in file \fBset\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+
+.PP
+Runs all the tests\&. 
+.PP
+\fBReturns\fP
+.RS 4
+(int) Returns 0 to specify to Meson that the tests finished correctly 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBset\&.cpp\fP\&.
+.PP
+References \fBset::contains()\fP, \fBset::count()\fP, \fBset::diff()\fP, \fBset::intersection()\fP, \fBset::sdiff()\fP, \fBset::sunion()\fP, and \fBset::unique()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSet++ from the source code\&.
