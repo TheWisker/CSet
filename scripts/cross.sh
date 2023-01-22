@@ -11,3 +11,5 @@ cp -r ./meson-dist/* ../../dist/
 cd ..
 cp -r ./meson-dist/* ../dist/
 cd ..
+git add .
+git commit -m "Cross compilation executed"
