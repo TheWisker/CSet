@@ -8,7 +8,7 @@ At the moment it only includes a handful of functions in the set namespace. The 
 
 <h2 align="center">Documentation</h2>
 
-<h3 align="center">[https://thewisker.github.io/CSet](https://thewisker.github.io/CSet "Documentation")</h3>
+<p align="center">[https://thewisker.github.io/CSet](https://thewisker.github.io/CSet "Documentation")</p>
 
 <h2 align="center">Author</h2>
 <div align="center">
