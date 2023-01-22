@@ -213,19 +213,19 @@
   <option  id='GENERATE_HTML' default='yes' type='bool'><value>YES</value></option>
   <option  id='HTML_OUTPUT' default='yes' type='string'><value><![CDATA[html]]></value></option>
   <option  id='HTML_FILE_EXTENSION' default='yes' type='string'><value><![CDATA[.html]]></value></option>
-  <option  id='HTML_HEADER' default='no' type='string'><value><![CDATA[./docassets/header.html]]></value></option>
+  <option  id='HTML_HEADER' default='no' type='string'><value><![CDATA[./assets/header.html]]></value></option>
   <option  id='HTML_FOOTER' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='HTML_STYLESHEET' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='HTML_EXTRA_STYLESHEET' default='no' type='stringlist'>
-    <value><![CDATA[./docassets/custom.css]]></value>
-    <value><![CDATA[./docassets/doxygen-awesome.css]]></value>
-    <value><![CDATA[./docassets/doxygen-awesome-sidebar-only.css]]></value>
-    <value><![CDATA[./docassets/doxygen-awesome-sidebar-only-darkmode-toggle.css]]></value>
+    <value><![CDATA[./assets/custom.css]]></value>
+    <value><![CDATA[./assets/doxygen-awesome.css]]></value>
+    <value><![CDATA[./assets/doxygen-awesome-sidebar-only.css]]></value>
+    <value><![CDATA[./assets/doxygen-awesome-sidebar-only-darkmode-toggle.css]]></value>
   </option>
   <option  id='HTML_EXTRA_FILES' default='no' type='stringlist'>
-    <value><![CDATA[./docassets/doxygen-awesome-darkmode-toggle.js]]></value>
-    <value><![CDATA[./docassets/doxygen-awesome-fragment-copy-button.js]]></value>
-    <value><![CDATA[./docassets/doxygen-awesome-interactive-toc.js]]></value>
+    <value><![CDATA[./assets/doxygen-awesome-darkmode-toggle.js]]></value>
+    <value><![CDATA[./assets/doxygen-awesome-fragment-copy-button.js]]></value>
+    <value><![CDATA[./assets/doxygen-awesome-interactive-toc.js]]></value>
   </option>
   <option  id='HTML_COLORSTYLE' default='no' type='string'><value>AUTO_DARK</value></option>
   <option  id='HTML_COLORSTYLE_HUE' default='yes' type='int'><value>220</value></option>
