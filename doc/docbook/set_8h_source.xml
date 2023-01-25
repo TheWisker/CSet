@@ -3,75 +3,261 @@
 <title>set.h</title>
 <indexterm><primary>include/set.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_set_8h_source_1l00001"/>00001 
-<anchor xml:id="_set_8h_source_1l00056"/>00056 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
-<anchor xml:id="_set_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
-<anchor xml:id="_set_8h_source_1l00063"/>00063 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceset">set</link>&#32;{
-<anchor xml:id="_set_8h_source_1l00064"/>00064 
-<anchor xml:id="_set_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">contains</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>;&#32;<emphasis role="comment">//Set&#32;contains</emphasis>
-<anchor xml:id="_set_8h_source_1l00074"/>00074 
-<anchor xml:id="_set_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">count</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>;&#32;<emphasis role="comment">//Set&#32;count</emphasis>
-<anchor xml:id="_set_8h_source_1l00083"/>00083 
-<anchor xml:id="_set_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">unique</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;unique</emphasis>
-<anchor xml:id="_set_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;
-<anchor xml:id="_set_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">sunion</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Union</emphasis>
-<anchor xml:id="_set_8h_source_1l00102"/>00102 
-<anchor xml:id="_set_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">intersection</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Intersection</emphasis>
-<anchor xml:id="_set_8h_source_1l00112"/>00112 
-<anchor xml:id="_set_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">diff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Difference</emphasis>
-<anchor xml:id="_set_8h_source_1l00122"/>00122 
-<anchor xml:id="_set_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">sdiff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Symmetric&#32;difference</emphasis>
-<anchor xml:id="_set_8h_source_1l00132"/>00132 }
-<anchor xml:id="_set_8h_source_1l00133"/>00133 
-<anchor xml:id="_set_8h_source_1l00134"/>00134 <emphasis role="comment">//Set&#32;contains</emphasis>
-<anchor xml:id="_set_8h_source_1l00135"/>00135 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00136"/><link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">00136</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>&#32;{
-<anchor xml:id="_set_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(v&#32;==&#32;kk)&#32;{<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;}}
-<anchor xml:id="_set_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_set_8h_source_1l00139"/>00139 };
-<anchor xml:id="_set_8h_source_1l00140"/>00140 
-<anchor xml:id="_set_8h_source_1l00141"/>00141 <emphasis role="comment">//Set&#32;count</emphasis>
-<anchor xml:id="_set_8h_source_1l00142"/>00142 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00143"/><link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">00143</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">set::count</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>&#32;{
-<anchor xml:id="_set_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;c&#32;=&#32;0;
-<anchor xml:id="_set_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(v&#32;==&#32;kk)&#32;{c++;}}
-<anchor xml:id="_set_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00147"/>00147 };
-<anchor xml:id="_set_8h_source_1l00148"/>00148 
-<anchor xml:id="_set_8h_source_1l00149"/>00149 <emphasis role="comment">//Set&#32;unique</emphasis>
-<anchor xml:id="_set_8h_source_1l00150"/>00150 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00151"/><link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">00151</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k)&#32;{
-<anchor xml:id="_set_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;{c.push_back(v);}}
-<anchor xml:id="_set_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00154"/>00154 };
-<anchor xml:id="_set_8h_source_1l00155"/>00155 
-<anchor xml:id="_set_8h_source_1l00156"/>00156 <emphasis role="comment">//Set&#32;theory:&#32;Union</emphasis>
-<anchor xml:id="_set_8h_source_1l00157"/>00157 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00158"/><link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">00158</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
-<anchor xml:id="_set_8h_source_1l00159"/>00159 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;{c.push_back(v);}}
-<anchor xml:id="_set_8h_source_1l00160"/>00160 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;vv:&#32;kk)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;vv))&#32;{c.push_back(vv);}}
-<anchor xml:id="_set_8h_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00162"/>00162 };
-<anchor xml:id="_set_8h_source_1l00163"/>00163 
-<anchor xml:id="_set_8h_source_1l00164"/>00164 <emphasis role="comment">//Set&#32;theory:&#32;Intersection</emphasis>
-<anchor xml:id="_set_8h_source_1l00165"/>00165 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00166"/><link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">00166</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
-<anchor xml:id="_set_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>((!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;&amp;&amp;&#32;(<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(kk,&#32;v)))&#32;{c.push_back(v);}}
-<anchor xml:id="_set_8h_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;vv:&#32;kk)&#32;{<emphasis role="keywordflow">if</emphasis>((!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;vv))&#32;&amp;&amp;&#32;(<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(k,&#32;vv)))&#32;{c.push_back(vv);}}
-<anchor xml:id="_set_8h_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00170"/>00170 };
-<anchor xml:id="_set_8h_source_1l00171"/>00171 
-<anchor xml:id="_set_8h_source_1l00172"/>00172 <emphasis role="comment">//Set&#32;theory:&#32;Difference</emphasis>
-<anchor xml:id="_set_8h_source_1l00173"/>00173 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00174"/><link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">00174</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
-<anchor xml:id="_set_8h_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">contains</link>(kk,&#32;v))&#32;{c.push_back(v);}}
-<anchor xml:id="_set_8h_source_1l00176"/>00176 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00177"/>00177 };
-<anchor xml:id="_set_8h_source_1l00178"/>00178 
-<anchor xml:id="_set_8h_source_1l00179"/>00179 <emphasis role="comment">//Set&#32;theory:&#32;Symmetric&#32;difference</emphasis>
-<anchor xml:id="_set_8h_source_1l00180"/>00180 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
-<anchor xml:id="_set_8h_source_1l00181"/><link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">00181</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
-<anchor xml:id="_set_8h_source_1l00182"/>00182 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(c,&#32;k,&#32;kk);
-<anchor xml:id="_set_8h_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(c,&#32;kk,&#32;k);
-<anchor xml:id="_set_8h_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
-<anchor xml:id="_set_8h_source_1l00185"/>00185 };
+<anchor xml:id="_set_8h_source_1l00056"/>00056 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+<anchor xml:id="_set_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_set_8h_source_1l00058"/>00058 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_set_8h_source_1l00064"/>00064 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceset">set</link>&#32;{
+<anchor xml:id="_set_8h_source_1l00065"/>00065 
+<anchor xml:id="_set_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">contains</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>;&#32;<emphasis role="comment">//Set&#32;contains</emphasis>
+<anchor xml:id="_set_8h_source_1l00075"/>00075 
+<anchor xml:id="_set_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">count</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>;&#32;<emphasis role="comment">//Set&#32;count</emphasis>
+<anchor xml:id="_set_8h_source_1l00084"/>00084 
+<anchor xml:id="_set_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">unique</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00093"/>00093 
+<anchor xml:id="_set_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">unique</link>(std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00101"/>00101 
+<anchor xml:id="_set_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">unique</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00109"/>00109 
+<anchor xml:id="_set_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">sort</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00118"/>00118 
+<anchor xml:id="_set_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">sort</link>(std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00126"/>00126 
+<anchor xml:id="_set_8h_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">sort</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00134"/>00134 
+<anchor xml:id="_set_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">rsort</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;reverse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00143"/>00143 
+<anchor xml:id="_set_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">rsort</link>(std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;reverse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00151"/>00151 
+<anchor xml:id="_set_8h_source_1l00158"/>00158 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">rsort</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;reverse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00159"/>00159 
+<anchor xml:id="_set_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">reverse</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00168"/>00168 
+<anchor xml:id="_set_8h_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">reverse</link>(std::vector&lt;T&gt;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00176"/>00176 
+<anchor xml:id="_set_8h_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">reverse</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k);&#32;<emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00184"/>00184 &#32;&#32;&#32;&#32;
+<anchor xml:id="_set_8h_source_1l00193"/>00193 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">sunion</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00194"/>00194 
+<anchor xml:id="_set_8h_source_1l00202"/>00202 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">sunion</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00203"/>00203 
+<anchor xml:id="_set_8h_source_1l00211"/><link linkend="_namespaceset_1a0e3e720e169b3cbea702da06e7241494">00211</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">sunion</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00212"/>00212 
+<anchor xml:id="_set_8h_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">intersection</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00222"/>00222 
+<anchor xml:id="_set_8h_source_1l00230"/>00230 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">intersection</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00231"/>00231 
+<anchor xml:id="_set_8h_source_1l00239"/><link linkend="_namespaceset_1a9bf96dd651d61262a4aacebd188f6677">00239</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">intersection</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00240"/>00240 
+<anchor xml:id="_set_8h_source_1l00249"/>00249 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">diff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00250"/>00250 
+<anchor xml:id="_set_8h_source_1l00258"/>00258 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">diff</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00259"/>00259 
+<anchor xml:id="_set_8h_source_1l00267"/><link linkend="_namespaceset_1a33807611580dac21eeb1d4629635d571">00267</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">diff</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00268"/>00268 
+<anchor xml:id="_set_8h_source_1l00277"/>00277 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">sdiff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00278"/>00278 
+<anchor xml:id="_set_8h_source_1l00286"/>00286 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">sdiff</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00287"/>00287 
+<anchor xml:id="_set_8h_source_1l00295"/><link linkend="_namespaceset_1a2ef17eb00844ef043ce1ddeba457037c">00295</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">sdiff</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk);&#32;<emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00296"/>00296 }
+<anchor xml:id="_set_8h_source_1l00297"/>00297 
+<anchor xml:id="_set_8h_source_1l00298"/>00298 <emphasis role="comment">//Set&#32;contains</emphasis>
+<anchor xml:id="_set_8h_source_1l00299"/>00299 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00300"/><link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">00300</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>&#32;{
+<anchor xml:id="_set_8h_source_1l00301"/>00301 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(v&#32;==&#32;kk)&#32;{<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;}}
+<anchor xml:id="_set_8h_source_1l00302"/>00302 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_set_8h_source_1l00303"/>00303 };
+<anchor xml:id="_set_8h_source_1l00304"/>00304 
+<anchor xml:id="_set_8h_source_1l00305"/>00305 <emphasis role="comment">//Set&#32;count</emphasis>
+<anchor xml:id="_set_8h_source_1l00306"/>00306 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00307"/><link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">00307</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_namespaceset_1ac5365eb686589aa9064bab275539177a">set::count</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;kk)&#32;<emphasis role="keyword">noexcept</emphasis>&#32;{
+<anchor xml:id="_set_8h_source_1l00308"/>00308 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;c&#32;=&#32;0;
+<anchor xml:id="_set_8h_source_1l00309"/>00309 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(v&#32;==&#32;kk)&#32;{c++;}}
+<anchor xml:id="_set_8h_source_1l00310"/>00310 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00311"/>00311 };
+<anchor xml:id="_set_8h_source_1l00312"/>00312 
+<anchor xml:id="_set_8h_source_1l00313"/>00313 <emphasis role="comment">//Set&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00314"/>00314 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00315"/><link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">00315</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00316"/>00316 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;{c.push_back(v);}}
+<anchor xml:id="_set_8h_source_1l00317"/>00317 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00318"/>00318 };
+<anchor xml:id="_set_8h_source_1l00319"/>00319 
+<anchor xml:id="_set_8h_source_1l00320"/>00320 <emphasis role="comment">//Set&#32;overloaded&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00321"/>00321 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00322"/><link linkend="_namespaceset_1aa0f28078b1f7e11db59369c36f07e232">00322</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00323"/>00323 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;t;
+<anchor xml:id="_set_8h_source_1l00324"/>00324 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(t,&#32;k);
+<anchor xml:id="_set_8h_source_1l00325"/>00325 &#32;&#32;&#32;&#32;k&#32;=&#32;std::move(t);
+<anchor xml:id="_set_8h_source_1l00326"/>00326 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00327"/>00327 };
+<anchor xml:id="_set_8h_source_1l00328"/>00328 
+<anchor xml:id="_set_8h_source_1l00329"/>00329 <emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;unique</emphasis>
+<anchor xml:id="_set_8h_source_1l00330"/>00330 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00331"/><link linkend="_namespaceset_1a3bf08e7886ae166e35bc5823bd0108c5">00331</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00332"/>00332 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;t;
+<anchor xml:id="_set_8h_source_1l00333"/>00333 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa">set::unique</link>(t,&#32;k);
+<anchor xml:id="_set_8h_source_1l00334"/>00334 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;t;
+<anchor xml:id="_set_8h_source_1l00335"/>00335 };
+<anchor xml:id="_set_8h_source_1l00336"/>00336 
+<anchor xml:id="_set_8h_source_1l00337"/>00337 <emphasis role="comment">//Set&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00338"/>00338 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00339"/><link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">00339</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">set::sort</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00340"/>00340 &#32;&#32;&#32;&#32;c&#32;=&#32;k;
+<anchor xml:id="_set_8h_source_1l00341"/>00341 &#32;&#32;&#32;&#32;std::sort(c.begin(),&#32;c.end());
+<anchor xml:id="_set_8h_source_1l00342"/>00342 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00343"/>00343 }
+<anchor xml:id="_set_8h_source_1l00344"/>00344 
+<anchor xml:id="_set_8h_source_1l00345"/>00345 <emphasis role="comment">//Set&#32;overloaded&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00346"/>00346 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00347"/><link linkend="_namespaceset_1ab56c2eb27a6ca1608fcaca498bb469c1">00347</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">set::sort</link>(std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00348"/>00348 &#32;&#32;&#32;&#32;std::sort(k.begin(),&#32;k.end());
+<anchor xml:id="_set_8h_source_1l00349"/>00349 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00350"/>00350 }
+<anchor xml:id="_set_8h_source_1l00351"/>00351 
+<anchor xml:id="_set_8h_source_1l00352"/>00352 <emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00353"/>00353 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00354"/><link linkend="_namespaceset_1aa471bbd83d3f4218c46fbdd911036003">00354</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1acd71ed889f217fdd2ed230a7af7239b0">set::sort</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00355"/>00355 &#32;&#32;&#32;&#32;std::sort(k.begin(),&#32;k.end());
+<anchor xml:id="_set_8h_source_1l00356"/>00356 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00357"/>00357 }
+<anchor xml:id="_set_8h_source_1l00358"/>00358 
+<anchor xml:id="_set_8h_source_1l00359"/>00359 <emphasis role="comment">//Set&#32;reverse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00360"/>00360 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00361"/><link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">00361</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">set::rsort</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00362"/>00362 &#32;&#32;&#32;&#32;c&#32;=&#32;k;
+<anchor xml:id="_set_8h_source_1l00363"/>00363 &#32;&#32;&#32;&#32;std::sort(c.begin(),&#32;c.end(),&#32;std::greater&lt;T&gt;());
+<anchor xml:id="_set_8h_source_1l00364"/>00364 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00365"/>00365 }
+<anchor xml:id="_set_8h_source_1l00366"/>00366 
+<anchor xml:id="_set_8h_source_1l00367"/>00367 <emphasis role="comment">//Set&#32;overloaded&#32;reverse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00368"/>00368 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00369"/><link linkend="_namespaceset_1a36984d54610ebb1926243864141934c7">00369</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">set::rsort</link>(std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00370"/>00370 &#32;&#32;&#32;&#32;std::sort(k.begin(),&#32;k.end(),&#32;std::greater&lt;T&gt;());
+<anchor xml:id="_set_8h_source_1l00371"/>00371 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00372"/>00372 }
+<anchor xml:id="_set_8h_source_1l00373"/>00373 
+<anchor xml:id="_set_8h_source_1l00374"/>00374 <emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;everse&#32;sort</emphasis>
+<anchor xml:id="_set_8h_source_1l00375"/>00375 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00376"/><link linkend="_namespaceset_1af76b38d3248072064d37e0abfb6d99de">00376</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c">set::rsort</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00377"/>00377 &#32;&#32;&#32;&#32;std::sort(k.begin(),&#32;k.end(),&#32;std::greater&lt;T&gt;());
+<anchor xml:id="_set_8h_source_1l00378"/>00378 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00379"/>00379 }
+<anchor xml:id="_set_8h_source_1l00380"/>00380 
+<anchor xml:id="_set_8h_source_1l00381"/>00381 <emphasis role="comment">//Set&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00382"/>00382 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00383"/><link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">00383</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">set::reverse</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00384"/>00384 &#32;&#32;&#32;&#32;c&#32;=&#32;k;
+<anchor xml:id="_set_8h_source_1l00385"/>00385 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;(k.size()&#32;/&#32;2);&#32;i++)&#32;{std::swap(c[i],&#32;c[c.size()&#32;-&#32;i&#32;-&#32;1]);}
+<anchor xml:id="_set_8h_source_1l00386"/>00386 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00387"/>00387 };
+<anchor xml:id="_set_8h_source_1l00388"/>00388 
+<anchor xml:id="_set_8h_source_1l00389"/>00389 <emphasis role="comment">//Set&#32;overloaded&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00390"/>00390 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00391"/><link linkend="_namespaceset_1ab913282f766e96ea5e334f25c7ce1c8e">00391</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">set::reverse</link>(std::vector&lt;T&gt;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00392"/>00392 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;(k.size()&#32;/&#32;2);&#32;i++)&#32;{std::swap(k[i],&#32;k[k.size()&#32;-&#32;i&#32;-&#32;1]);}
+<anchor xml:id="_set_8h_source_1l00393"/>00393 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00394"/>00394 };
+<anchor xml:id="_set_8h_source_1l00395"/>00395 
+<anchor xml:id="_set_8h_source_1l00396"/>00396 <emphasis role="comment">//Set&#32;overloaded&#32;rvalue&#32;reverse</emphasis>
+<anchor xml:id="_set_8h_source_1l00397"/>00397 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00398"/><link linkend="_namespaceset_1a378e8ea58f8e5746692d9c911b36968c">00398</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1acea3595093efb07e1bc491fd2d9ed303">set::reverse</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k)&#32;{
+<anchor xml:id="_set_8h_source_1l00399"/>00399 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;(k.size()&#32;/&#32;2);&#32;i++)&#32;{std::swap(k[i],&#32;k[k.size()&#32;-&#32;i&#32;-&#32;1]);}
+<anchor xml:id="_set_8h_source_1l00400"/>00400 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;k;
+<anchor xml:id="_set_8h_source_1l00401"/>00401 };
+<anchor xml:id="_set_8h_source_1l00402"/>00402 
+<anchor xml:id="_set_8h_source_1l00403"/>00403 <emphasis role="comment">//Set&#32;theory:&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00404"/>00404 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00405"/><link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">00405</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00406"/>00406 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;{c.push_back(v);}}
+<anchor xml:id="_set_8h_source_1l00407"/>00407 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;vv:&#32;kk)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;vv))&#32;{c.push_back(vv);}}
+<anchor xml:id="_set_8h_source_1l00408"/>00408 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00409"/>00409 };
+<anchor xml:id="_set_8h_source_1l00410"/>00410 
+<anchor xml:id="_set_8h_source_1l00411"/>00411 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00412"/>00412 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00413"/><link linkend="_namespaceset_1a4ed87ed055788fd8d140f6a319a40c52">00413</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00414"/>00414 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00415"/>00415 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00416"/>00416 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00417"/>00417 };
+<anchor xml:id="_set_8h_source_1l00418"/>00418 
+<anchor xml:id="_set_8h_source_1l00419"/>00419 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Union</emphasis>
+<anchor xml:id="_set_8h_source_1l00420"/>00420 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00421"/>00421 <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00422"/>00422 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00423"/>00423 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c">set::sunion</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00424"/>00424 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00425"/>00425 };
+<anchor xml:id="_set_8h_source_1l00426"/>00426 
+<anchor xml:id="_set_8h_source_1l00427"/>00427 <emphasis role="comment">//Set&#32;theory:&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00428"/>00428 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00429"/><link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">00429</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00430"/>00430 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>((!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;v))&#32;&amp;&amp;&#32;(<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(kk,&#32;v)))&#32;{c.push_back(v);}}
+<anchor xml:id="_set_8h_source_1l00431"/>00431 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;vv:&#32;kk)&#32;{<emphasis role="keywordflow">if</emphasis>((!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(c,&#32;vv))&#32;&amp;&amp;&#32;(<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">set::contains</link>(k,&#32;vv)))&#32;{c.push_back(vv);}}
+<anchor xml:id="_set_8h_source_1l00432"/>00432 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00433"/>00433 };
+<anchor xml:id="_set_8h_source_1l00434"/>00434 
+<anchor xml:id="_set_8h_source_1l00435"/>00435 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00436"/>00436 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00437"/><link linkend="_namespaceset_1a937da7a049b9728f41cdd28143fc8aab">00437</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00438"/>00438 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00439"/>00439 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00440"/>00440 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00441"/>00441 };
+<anchor xml:id="_set_8h_source_1l00442"/>00442 
+<anchor xml:id="_set_8h_source_1l00443"/>00443 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Intersection</emphasis>
+<anchor xml:id="_set_8h_source_1l00444"/>00444 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00445"/>00445 <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00446"/>00446 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00447"/>00447 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1abbfdb13d235a0b18b76350266fe35645">set::intersection</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00448"/>00448 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00449"/>00449 };
+<anchor xml:id="_set_8h_source_1l00450"/>00450 
+<anchor xml:id="_set_8h_source_1l00451"/>00451 <emphasis role="comment">//Set&#32;theory:&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00452"/>00452 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00453"/><link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">00453</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00454"/>00454 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;T&amp;&#32;v:&#32;k)&#32;{<emphasis role="keywordflow">if</emphasis>(!<link linkend="_namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e">contains</link>(kk,&#32;v))&#32;{c.push_back(v);}}
+<anchor xml:id="_set_8h_source_1l00455"/>00455 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00456"/>00456 };
+<anchor xml:id="_set_8h_source_1l00457"/>00457 
+<anchor xml:id="_set_8h_source_1l00458"/>00458 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00459"/>00459 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00460"/><link linkend="_namespaceset_1adab78d19090efa67608f5bdf7edfcd17">00460</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00461"/>00461 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00462"/>00462 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00463"/>00463 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00464"/>00464 };
+<anchor xml:id="_set_8h_source_1l00465"/>00465 
+<anchor xml:id="_set_8h_source_1l00466"/>00466 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00467"/>00467 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00468"/>00468 <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00469"/>00469 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00470"/>00470 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00471"/>00471 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00472"/>00472 };
+<anchor xml:id="_set_8h_source_1l00473"/>00473 
+<anchor xml:id="_set_8h_source_1l00474"/>00474 <emphasis role="comment">//Set&#32;theory:&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00475"/>00475 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00476"/><link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">00476</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(std::vector&lt;T&gt;&amp;&#32;c,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00477"/>00477 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(c,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00478"/>00478 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a37f2c9c18fda658d3fb86550e519e773">set::diff</link>(c,&#32;kk,&#32;k);
+<anchor xml:id="_set_8h_source_1l00479"/>00479 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c;
+<anchor xml:id="_set_8h_source_1l00480"/>00480 };
+<anchor xml:id="_set_8h_source_1l00481"/>00481 
+<anchor xml:id="_set_8h_source_1l00482"/>00482 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00483"/>00483 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00484"/><link linkend="_namespaceset_1aadf61b4b009c85eedfebcd324744433b">00484</link> <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;k,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;T&gt;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00485"/>00485 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00486"/>00486 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00487"/>00487 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00488"/>00488 };
+<anchor xml:id="_set_8h_source_1l00489"/>00489 
+<anchor xml:id="_set_8h_source_1l00490"/>00490 <emphasis role="comment">//Set&#32;theory:&#32;Overloaded&#32;Rvalue&#32;Symmetric&#32;difference</emphasis>
+<anchor xml:id="_set_8h_source_1l00491"/>00491 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="_set_8h_source_1l00492"/>00492 <emphasis role="keyword">inline</emphasis>&#32;std::vector&lt;T&gt;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(std::vector&lt;T&gt;&amp;&amp;&#32;k,&#32;std::vector&lt;T&gt;&amp;&amp;&#32;kk)&#32;{
+<anchor xml:id="_set_8h_source_1l00493"/>00493 &#32;&#32;&#32;&#32;std::vector&lt;T&gt;&#32;r;
+<anchor xml:id="_set_8h_source_1l00494"/>00494 &#32;&#32;&#32;&#32;<link linkend="_namespaceset_1a9e1d205dc88719374276b5bd73fc13b6">set::sdiff</link>(r,&#32;k,&#32;kk);
+<anchor xml:id="_set_8h_source_1l00495"/>00495 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+<anchor xml:id="_set_8h_source_1l00496"/>00496 };
 </programlisting></section>

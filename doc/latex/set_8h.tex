@@ -5,6 +5,7 @@
 This is the main header file of the cset library. It contains all the functions and their implementation.  
 
 
+{\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 Include dependency graph for set.\+h\+:
 % FIG 0
@@ -24,13 +25,51 @@ namespace \mbox{\hyperlink{namespaceset}{set}}
 \begin{DoxyCompactList}\small\item\em Counts the number of times an element is present in the set. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set\+::unique}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
 \begin{DoxyCompactList}\small\item\em Removes duplicates from a set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_aa0f28078b1f7e11db59369c36f07e232}{set\+::unique}} (std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Removes duplicates from a set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a3bf08e7886ae166e35bc5823bd0108c5}{set\+::unique}} (std\+::vector$<$ T $>$ \&\&k)
+\begin{DoxyCompactList}\small\item\em Removes duplicates from a set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{set\+::sort}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in ascending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ab56c2eb27a6ca1608fcaca498bb469c1}{set\+::sort}} (std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in ascending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_aa471bbd83d3f4218c46fbdd911036003}{set\+::sort}} (std\+::vector$<$ T $>$ \&\&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in ascending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{set\+::rsort}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in descending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a36984d54610ebb1926243864141934c7}{set\+::rsort}} (std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in descending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_af76b38d3248072064d37e0abfb6d99de}{set\+::rsort}} (std\+::vector$<$ T $>$ \&\&k)
+\begin{DoxyCompactList}\small\item\em Sorts a set in descending order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{set\+::reverse}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Reverses the passed set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ab913282f766e96ea5e334f25c7ce1c8e}{set\+::reverse}} (std\+::vector$<$ T $>$ \&k)
+\begin{DoxyCompactList}\small\item\em Reverses the passed set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a378e8ea58f8e5746692d9c911b36968c}{set\+::reverse}} (std\+::vector$<$ T $>$ \&\&k)
+\begin{DoxyCompactList}\small\item\em Reverses the passed set. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set\+::sunion}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory union of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a4ed87ed055788fd8d140f6a319a40c52}{set\+::sunion}} (const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory union of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a0e3e720e169b3cbea702da06e7241494}{set\+::sunion}} (std\+::vector$<$ T $>$ \&\&k, const std\+::vector$<$ T $>$ \&\&kk)
 \begin{DoxyCompactList}\small\item\em Obtains the set theory union of two sets. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set\+::intersection}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
 \begin{DoxyCompactList}\small\item\em Obtains the set theory intersection of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a937da7a049b9728f41cdd28143fc8aab}{set\+::intersection}} (const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory intersection of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a9bf96dd651d61262a4aacebd188f6677}{set\+::intersection}} (std\+::vector$<$ T $>$ \&\&k, const std\+::vector$<$ T $>$ \&\&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory intersection of two sets. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set\+::diff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
 \begin{DoxyCompactList}\small\item\em Obtains the set theory difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_adab78d19090efa67608f5bdf7edfcd17}{set\+::diff}} (const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a33807611580dac21eeb1d4629635d571}{set\+::diff}} (std\+::vector$<$ T $>$ \&\&k, const std\+::vector$<$ T $>$ \&\&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory difference of two sets. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \& \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set\+::sdiff}} (std\+::vector$<$ T $>$ \&c, const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory symmetric difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_aadf61b4b009c85eedfebcd324744433b}{set\+::sdiff}} (const std\+::vector$<$ T $>$ \&k, const std\+::vector$<$ T $>$ \&kk)
+\begin{DoxyCompactList}\small\item\em Obtains the set theory symmetric difference of two sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceset_a2ef17eb00844ef043ce1ddeba457037c}{set\+::sdiff}} (std\+::vector$<$ T $>$ \&\&k, const std\+::vector$<$ T $>$ \&\&kk)
 \begin{DoxyCompactList}\small\item\em Obtains the set theory symmetric difference of two sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

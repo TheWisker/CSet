@@ -65,15 +65,21 @@ int main() {
 
 	std::thread contains([]() {benchmark("Contains", []() {set::contains({0, 0, 1, 0, 0}, 1);}, 1000);});
 	std::thread count([]() {benchmark("Count", []() {set::count({0, 0, 1, 0, 0}, 0);}, 1000);});
-	std::thread unique([&t]() {benchmark("Unique", [&t]() {set::unique(t, {0, 0, 1, 0, 0});}, 1000);});
-	std::thread sunion([&t]() {benchmark("Union", [&t]() {set::sunion(t, {1, 2, 3}, {3, 4, 5});}, 1000);});
-	std::thread sintersection([&t]() {benchmark("Intersection", [&t]() {set::intersection(t, {1, 2, 3}, {3, 4, 5});}, 1000);});
-	std::thread diff([&t]() {benchmark("Difference", [&t]() {set::diff(t, {1, 2, 3}, {3, 4, 5});}, 1000);});
-	std::thread sdiff([&t]() {benchmark("Symmetric difference", [&t]() {set::sdiff(t, {1, 2, 3}, {3, 4, 5});}, 1000);});
+	std::thread unique([]() {benchmark("Unique", []() {set::unique(std::vector<int>({0, 0, 1, 0, 0}));}, 1000);});
+	std::thread sort([]() {benchmark("Sort", []() {set::sort(std::vector<int>({0, 0, 1, 0, 0}));}, 1000);});
+	std::thread rsort([]() {benchmark("Reverse Sort", []() {set::rsort(std::vector<int>({0, 0, 1, 0, 0}));}, 1000);});
+	std::thread reverse([]() {benchmark("Reverse", []() {set::reverse(std::vector<int>({0, 0, 1, 0, 0}));}, 1000);});
+	std::thread sunion([]() {benchmark("Union", []() {set::sunion(std::vector<int>({1, 2, 3}), std::vector<int>({3, 4, 5}));}, 1000);});
+	std::thread sintersection([]() {benchmark("Intersection", []() {set::intersection(std::vector<int>({1, 2, 3}), std::vector<int>({3, 4, 5}));}, 1000);});
+	std::thread diff([]() {benchmark("Difference", []() {set::diff(std::vector<int>({1, 2, 3}), std::vector<int>({3, 4, 5}));}, 1000);});
+	std::thread sdiff([]() {benchmark("Symmetric difference", []() {set::sdiff(std::vector<int>({1, 2, 3}), std::vector<int>({3, 4, 5}));}, 1000);});
 
     contains.join();
 	count.join();
 	unique.join();
+	sort.join();
+	rsort.join();
+	reverse.join();
 	sunion.join();
 	sintersection.join();
 	diff.join();

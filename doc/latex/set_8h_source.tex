@@ -3,76 +3,262 @@
 \mbox{\hyperlink{set_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{set_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00056}00056\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00057}00057\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00063}00063\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceset}{set}}\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{contains}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//Set\ contains}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{count}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//Set\ count}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{unique}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ unique}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00092}00092\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00101}00101\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{sunion}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Union}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00111}00111\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{intersection}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Intersection}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00121}00121\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{diff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Difference}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00131}00131\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{sdiff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Symmetric\ difference}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00132}00132\ \}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00133}00133\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00134}00134\ \textcolor{comment}{//Set\ contains}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00135}00135\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00136}\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{00136}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept}\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(v\ ==\ kk)\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00139}00139\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00141}00141\ \textcolor{comment}{//Set\ count}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00142}00142\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00143}\mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{00143}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set::count}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept}\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00144}00144\ \ \ \ \ \textcolor{keywordtype}{int}\ c\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00145}00145\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(v\ ==\ kk)\ \{c++;\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00147}00147\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00148}00148\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00149}00149\ \textcolor{comment}{//Set\ unique}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00150}00150\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00151}\mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{00151}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k)\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \{c.push\_back(v);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00154}00154\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00155}00155\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00156}00156\ \textcolor{comment}{//Set\ theory:\ Union}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00157}00157\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00158}\mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{00158}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00159}00159\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \{c.push\_back(v);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ vv:\ kk)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ vv))\ \{c.push\_back(vv);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00161}00161\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00162}00162\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00163}00163\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00164}00164\ \textcolor{comment}{//Set\ theory:\ Intersection}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00165}00165\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00166}\mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{00166}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}((!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \&\&\ (\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(kk,\ v)))\ \{c.push\_back(v);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00168}00168\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ vv:\ kk)\ \{\textcolor{keywordflow}{if}((!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ vv))\ \&\&\ (\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(k,\ vv)))\ \{c.push\_back(vv);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00169}00169\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00170}00170\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00171}00171\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00172}00172\ \textcolor{comment}{//Set\ theory:\ Difference}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00173}00173\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00174}\mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{00174}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00175}00175\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{contains}}(kk,\ v))\ \{c.push\_back(v);\}\}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00177}00177\ \};}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00178}00178\ }
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00179}00179\ \textcolor{comment}{//Set\ theory:\ Symmetric\ difference}}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00180}00180\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00181}\mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{00181}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00182}00182\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(c,\ k,\ kk);}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(c,\ kk,\ k);}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00184}00184\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
-\DoxyCodeLine{\Hypertarget{set_8h_source_l00185}00185\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00056}00056\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00057}00057\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00058}00058\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00064}00064\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceset}{set}}\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{contains}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//Set\ contains}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00083}00083\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{count}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//Set\ count}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{unique}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00100}00100\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{unique}}(std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ overloaded\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00108}00108\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{unique}}(std::vector<T>\&\&\ k);\ \textcolor{comment}{//Set\ overloaded\ rvalue\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00117}00117\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{sort}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{sort}}(std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ overloaded\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00133}00133\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{sort}}(std::vector<T>\&\&\ k);\ \textcolor{comment}{//Set\ overloaded\ rvalue\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00142}00142\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{rsort}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ reverse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00150}00150\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{rsort}}(std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ overloaded\ reverse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00158}00158\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{rsort}}(std::vector<T>\&\&\ k);\ \textcolor{comment}{//Set\ overloaded\ rvalue\ reverse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00167}00167\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{reverse}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00175}00175\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{reverse}}(std::vector<T>\&\ k);\ \textcolor{comment}{//Set\ overloaded\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00183}00183\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{reverse}}(std::vector<T>\&\&\ k);\ \textcolor{comment}{//Set\ overloaded\ rvalue\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00184}00184\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00193}00193\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{sunion}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00202}00202\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{sunion}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00211}\mbox{\hyperlink{namespaceset_a0e3e720e169b3cbea702da06e7241494}{00211}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{sunion}}(std::vector<T>\&\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00221}00221\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{intersection}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00230}00230\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{intersection}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00239}\mbox{\hyperlink{namespaceset_a9bf96dd651d61262a4aacebd188f6677}{00239}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{intersection}}(std::vector<T>\&\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00249}00249\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{diff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00258}00258\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{diff}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00267}\mbox{\hyperlink{namespaceset_a33807611580dac21eeb1d4629635d571}{00267}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{diff}}(std::vector<T>\&\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00277}00277\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{sdiff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00286}00286\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{sdiff}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00295}\mbox{\hyperlink{namespaceset_a2ef17eb00844ef043ce1ddeba457037c}{00295}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{sdiff}}(std::vector<T>\&\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\&\ kk);\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00296}00296\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00298}00298\ \textcolor{comment}{//Set\ contains}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00299}00299\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00300}\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{00300}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00301}00301\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(v\ ==\ kk)\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00302}00302\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00303}00303\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00304}00304\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00305}00305\ \textcolor{comment}{//Set\ count}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00306}00306\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00307}\mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{00307}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceset_ac5365eb686589aa9064bab275539177a}{set::count}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ T\&\ kk)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00308}00308\ \ \ \ \ \textcolor{keywordtype}{int}\ c\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00309}00309\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(v\ ==\ kk)\ \{c++;\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00310}00310\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00311}00311\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00313}00313\ \textcolor{comment}{//Set\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00314}00314\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00315}\mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{00315}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00316}00316\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \{c.push\_back(v);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00317}00317\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00318}00318\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00320}00320\ \textcolor{comment}{//Set\ overloaded\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00321}00321\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00322}\mbox{\hyperlink{namespaceset_aa0f28078b1f7e11db59369c36f07e232}{00322}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00323}00323\ \ \ \ \ std::vector<T>\ t;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00324}00324\ \ \ \ \ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(t,\ k);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00325}00325\ \ \ \ \ k\ =\ std::move(t);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00326}00326\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00327}00327\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00329}00329\ \textcolor{comment}{//Set\ overloaded\ rvalue\ unique}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00330}00330\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00331}\mbox{\hyperlink{namespaceset_a3bf08e7886ae166e35bc5823bd0108c5}{00331}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(std::vector<T>\&\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00332}00332\ \ \ \ \ std::vector<T>\ t;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00333}00333\ \ \ \ \ \mbox{\hyperlink{namespaceset_ac883181c654d551576c3ee2d1a0fa7fa}{set::unique}}(t,\ k);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00334}00334\ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00335}00335\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00337}00337\ \textcolor{comment}{//Set\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00338}00338\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00339}\mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{00339}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{set::sort}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00340}00340\ \ \ \ \ c\ =\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00341}00341\ \ \ \ \ std::sort(c.begin(),\ c.end());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00342}00342\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00343}00343\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00345}00345\ \textcolor{comment}{//Set\ overloaded\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00346}00346\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00347}\mbox{\hyperlink{namespaceset_ab56c2eb27a6ca1608fcaca498bb469c1}{00347}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{set::sort}}(std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00348}00348\ \ \ \ \ std::sort(k.begin(),\ k.end());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00349}00349\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00350}00350\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00352}00352\ \textcolor{comment}{//Set\ overloaded\ rvalue\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00353}00353\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00354}\mbox{\hyperlink{namespaceset_aa471bbd83d3f4218c46fbdd911036003}{00354}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_acd71ed889f217fdd2ed230a7af7239b0}{set::sort}}(std::vector<T>\&\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00355}00355\ \ \ \ \ std::sort(k.begin(),\ k.end());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00356}00356\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00357}00357\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00359}00359\ \textcolor{comment}{//Set\ reverse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00360}00360\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00361}\mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{00361}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{set::rsort}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00362}00362\ \ \ \ \ c\ =\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00363}00363\ \ \ \ \ std::sort(c.begin(),\ c.end(),\ std::greater<T>());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00364}00364\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00365}00365\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00367}00367\ \textcolor{comment}{//Set\ overloaded\ reverse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00368}00368\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00369}\mbox{\hyperlink{namespaceset_a36984d54610ebb1926243864141934c7}{00369}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{set::rsort}}(std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00370}00370\ \ \ \ \ std::sort(k.begin(),\ k.end(),\ std::greater<T>());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00371}00371\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00372}00372\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00374}00374\ \textcolor{comment}{//Set\ overloaded\ rvalue\ everse\ sort}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00375}00375\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00376}\mbox{\hyperlink{namespaceset_af76b38d3248072064d37e0abfb6d99de}{00376}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ac064d67f787dd20fcfbd46cbf4e7717c}{set::rsort}}(std::vector<T>\&\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00377}00377\ \ \ \ \ std::sort(k.begin(),\ k.end(),\ std::greater<T>());}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00378}00378\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00379}00379\ \}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00381}00381\ \textcolor{comment}{//Set\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00382}00382\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00383}\mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{00383}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{set::reverse}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00384}00384\ \ \ \ \ c\ =\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00385}00385\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (k.size()\ /\ 2);\ i++)\ \{std::swap(c[i],\ c[c.size()\ -\/\ i\ -\/\ 1]);\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00386}00386\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00387}00387\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00388}00388\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00389}00389\ \textcolor{comment}{//Set\ overloaded\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00390}00390\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00391}\mbox{\hyperlink{namespaceset_ab913282f766e96ea5e334f25c7ce1c8e}{00391}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{set::reverse}}(std::vector<T>\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00392}00392\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (k.size()\ /\ 2);\ i++)\ \{std::swap(k[i],\ k[k.size()\ -\/\ i\ -\/\ 1]);\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00393}00393\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00394}00394\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00396}00396\ \textcolor{comment}{//Set\ overloaded\ rvalue\ reverse}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00397}00397\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00398}\mbox{\hyperlink{namespaceset_a378e8ea58f8e5746692d9c911b36968c}{00398}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_acea3595093efb07e1bc491fd2d9ed303}{set::reverse}}(std::vector<T>\&\&\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00399}00399\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (k.size()\ /\ 2);\ i++)\ \{std::swap(k[i],\ k[k.size()\ -\/\ i\ -\/\ 1]);\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00400}00400\ \ \ \ \ \textcolor{keywordflow}{return}\ k;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00401}00401\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00403}00403\ \textcolor{comment}{//Set\ theory:\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00404}00404\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00405}\mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{00405}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00406}00406\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \{c.push\_back(v);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00407}00407\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ vv:\ kk)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ vv))\ \{c.push\_back(vv);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00408}00408\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00409}00409\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00411}00411\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00412}00412\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00413}\mbox{\hyperlink{namespaceset_a4ed87ed055788fd8d140f6a319a40c52}{00413}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00414}00414\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00415}00415\ \ \ \ \ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00416}00416\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00417}00417\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00419}00419\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Union}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00420}00420\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00421}00421\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(std::vector<T>\&\&\ k,\ std::vector<T>\&\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00422}00422\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00423}00423\ \ \ \ \ \mbox{\hyperlink{namespaceset_ad0fdcd2362fa264e9d23cba85ccec05c}{set::sunion}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00424}00424\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00425}00425\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00427}00427\ \textcolor{comment}{//Set\ theory:\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00428}00428\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00429}\mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{00429}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00430}00430\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}((!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ v))\ \&\&\ (\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(kk,\ v)))\ \{c.push\_back(v);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00431}00431\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ vv:\ kk)\ \{\textcolor{keywordflow}{if}((!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(c,\ vv))\ \&\&\ (\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{set::contains}}(k,\ vv)))\ \{c.push\_back(vv);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00432}00432\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00433}00433\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00434}00434\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00435}00435\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00436}00436\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00437}\mbox{\hyperlink{namespaceset_a937da7a049b9728f41cdd28143fc8aab}{00437}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00438}00438\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00439}00439\ \ \ \ \ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00440}00440\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00441}00441\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00443}00443\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Intersection}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00444}00444\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00445}00445\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(std::vector<T>\&\&\ k,\ std::vector<T>\&\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00446}00446\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00447}00447\ \ \ \ \ \mbox{\hyperlink{namespaceset_abbfdb13d235a0b18b76350266fe35645}{set::intersection}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00448}00448\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00449}00449\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00450}00450\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00451}00451\ \textcolor{comment}{//Set\ theory:\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00452}00452\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00453}\mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{00453}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00454}00454\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ T\&\ v:\ k)\ \{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{namespaceset_a980a97ee29ca68fb5b0ff49c22317a7e}{contains}}(kk,\ v))\ \{c.push\_back(v);\}\}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00455}00455\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00456}00456\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00458}00458\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00459}00459\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00460}\mbox{\hyperlink{namespaceset_adab78d19090efa67608f5bdf7edfcd17}{00460}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00461}00461\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00462}00462\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00463}00463\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00464}00464\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00466}00466\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00467}00467\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00468}00468\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(std::vector<T>\&\&\ k,\ std::vector<T>\&\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00469}00469\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00470}00470\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00471}00471\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00472}00472\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00474}00474\ \textcolor{comment}{//Set\ theory:\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00475}00475\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00476}\mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{00476}}\ \textcolor{keyword}{inline}\ std::vector<T>\&\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(std::vector<T>\&\ c,\ \textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00477}00477\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(c,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00478}00478\ \ \ \ \ \mbox{\hyperlink{namespaceset_a37f2c9c18fda658d3fb86550e519e773}{set::diff}}(c,\ kk,\ k);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00479}00479\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00480}00480\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00481}00481\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00482}00482\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00483}00483\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00484}\mbox{\hyperlink{namespaceset_aadf61b4b009c85eedfebcd324744433b}{00484}}\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(\textcolor{keyword}{const}\ std::vector<T>\&\ k,\ \textcolor{keyword}{const}\ std::vector<T>\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00485}00485\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00486}00486\ \ \ \ \ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00487}00487\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00488}00488\ \};}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00490}00490\ \textcolor{comment}{//Set\ theory:\ Overloaded\ Rvalue\ Symmetric\ difference}}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00491}00491\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00492}00492\ \textcolor{keyword}{inline}\ std::vector<T>\ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(std::vector<T>\&\&\ k,\ std::vector<T>\&\&\ kk)\ \{}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00493}00493\ \ \ \ \ std::vector<T>\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00494}00494\ \ \ \ \ \mbox{\hyperlink{namespaceset_a9e1d205dc88719374276b5bd73fc13b6}{set::sdiff}}(r,\ k,\ kk);}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00495}00495\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{set_8h_source_l00496}00496\ \};}
 
 \end{DoxyCode}

@@ -26,27 +26,35 @@ int main() {
 
     r = {}, t = {0, 0, 1, 0, 0}, rr = {0, 1};
     assert((set::unique(r, t) == rr) && "Unique failed with lvalue vector!");
-    assert((set::unique(r, t) == ((std::vector<int>) {0,1})) && "Unique failed with rvalue vector!");
+    assert((set::unique(t) == ((std::vector<int>) {0,1})) && "Unique failed with rvalue vector!");
+
+    r = {}, t = {1, 4, 3, 2, 5}, rr = {1, 2, 3, 4, 5};
+    assert((set::sort(r, t) == rr) && "Sort failed with lvalue vector!");
+    assert((set::sort(t) == ((std::vector<int>) {1, 2, 3, 4, 5})) && "Sort failed with rvalue vector!");
+
+    r = {}, t = {1, 4, 3, 2, 5}, rr = {5, 4, 3, 2, 1};
+    assert((set::rsort(r, t) == rr) && "Reverse sort failed with lvalue vector!");
+    assert((set::rsort(t) == ((std::vector<int>) {5, 4, 3, 2, 1})) && "Reverse sort failed with rvalue vector!");
+
+    r = {}, t = {1, 2, 3, 4, 5}, rr = {5, 4, 3, 2, 1};
+    assert((set::reverse(r, t) == rr) && "Reverse failed with lvalue vector!");
+    assert((set::reverse(t) == ((std::vector<int>) {5, 4, 3, 2, 1})) && "Reverse failed with rvalue vector!");
 
     r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2, 3, 4, 5};
-    set::sunion(r, t, tt);
-    assert((r == rr) && "Union failed with lvalue vector!");
-    assert((r == ((std::vector<int>) {1, 2, 3, 4, 5})) && "Union failed with rvalue vector!");
+    assert((set::sunion(r, t, tt) == rr) && "Union failed with lvalue vector!");
+    assert((set::sunion(t, tt) == ((std::vector<int>) {1, 2, 3, 4, 5})) && "Union failed with rvalue vector!");
 
     r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {3};
-    set::intersection(r, t, tt);
-    assert((r == rr) && "Intersection failed with lvalue vector!");
-    assert((r == ((std::vector<int>) {3})) && "Intersection failed with rvalue vector!");
+    assert((set::intersection(r, t, tt) == rr) && "Intersection failed with lvalue vector!");
+    assert((set::intersection(t, tt) == ((std::vector<int>) {3})) && "Intersection failed with rvalue vector!");
 
     r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2};
-    set::diff(r, t, tt);
-    assert((r == rr) && "Difference failed with lvalue vector!");
-    assert((r == ((std::vector<int>) {1, 2})) && "Difference failed with rvalue vector!");
+    assert((set::diff(r, t, tt) == rr) && "Difference failed with lvalue vector!");
+    assert((set::diff(t, tt) == ((std::vector<int>) {1, 2})) && "Difference failed with rvalue vector!");
 
     r = {}, t = {1, 2, 3}, tt = {3, 4, 5}, rr = {1, 2, 4, 5};
-    set::sdiff(r, t, tt);
-    assert((r == rr) && "Symmetric difference failed with lvalue vector!");
-    assert((r == ((std::vector<int>) {1, 2, 4, 5})) && "Symmetric difference failed with rvalue vector!");
+    assert((set::sdiff(r, t, tt) == rr) && "Symmetric difference failed with lvalue vector!");
+    assert((set::sdiff(t, tt) == ((std::vector<int>) {1, 2, 4, 5})) && "Symmetric difference failed with rvalue vector!");
 
     std::cout << "All tests passed smoothly!" << std::endl;
     return 0;

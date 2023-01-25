@@ -4,10 +4,29 @@
     <member refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" kind="function"><name>contains</name></member>
     <member refid="namespaceset_1ac5365eb686589aa9064bab275539177a" kind="function"><name>count</name></member>
     <member refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" kind="function"><name>unique</name></member>
+    <member refid="namespaceset_1aa0f28078b1f7e11db59369c36f07e232" kind="function"><name>unique</name></member>
+    <member refid="namespaceset_1a3bf08e7886ae166e35bc5823bd0108c5" kind="function"><name>unique</name></member>
+    <member refid="namespaceset_1acd71ed889f217fdd2ed230a7af7239b0" kind="function"><name>sort</name></member>
+    <member refid="namespaceset_1ab56c2eb27a6ca1608fcaca498bb469c1" kind="function"><name>sort</name></member>
+    <member refid="namespaceset_1aa471bbd83d3f4218c46fbdd911036003" kind="function"><name>sort</name></member>
+    <member refid="namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c" kind="function"><name>rsort</name></member>
+    <member refid="namespaceset_1a36984d54610ebb1926243864141934c7" kind="function"><name>rsort</name></member>
+    <member refid="namespaceset_1af76b38d3248072064d37e0abfb6d99de" kind="function"><name>rsort</name></member>
+    <member refid="namespaceset_1acea3595093efb07e1bc491fd2d9ed303" kind="function"><name>reverse</name></member>
+    <member refid="namespaceset_1ab913282f766e96ea5e334f25c7ce1c8e" kind="function"><name>reverse</name></member>
+    <member refid="namespaceset_1a378e8ea58f8e5746692d9c911b36968c" kind="function"><name>reverse</name></member>
     <member refid="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" kind="function"><name>sunion</name></member>
+    <member refid="namespaceset_1a4ed87ed055788fd8d140f6a319a40c52" kind="function"><name>sunion</name></member>
+    <member refid="namespaceset_1a0e3e720e169b3cbea702da06e7241494" kind="function"><name>sunion</name></member>
     <member refid="namespaceset_1abbfdb13d235a0b18b76350266fe35645" kind="function"><name>intersection</name></member>
+    <member refid="namespaceset_1a937da7a049b9728f41cdd28143fc8aab" kind="function"><name>intersection</name></member>
+    <member refid="namespaceset_1a9bf96dd651d61262a4aacebd188f6677" kind="function"><name>intersection</name></member>
     <member refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" kind="function"><name>diff</name></member>
+    <member refid="namespaceset_1adab78d19090efa67608f5bdf7edfcd17" kind="function"><name>diff</name></member>
+    <member refid="namespaceset_1a33807611580dac21eeb1d4629635d571" kind="function"><name>diff</name></member>
     <member refid="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" kind="function"><name>sdiff</name></member>
+    <member refid="namespaceset_1aadf61b4b009c85eedfebcd324744433b" kind="function"><name>sdiff</name></member>
+    <member refid="namespaceset_1a2ef17eb00844ef043ce1ddeba457037c" kind="function"><name>sdiff</name></member>
   </compound>
   <compound refid="set_8h" kind="file"><name>set.h</name>
   </compound>

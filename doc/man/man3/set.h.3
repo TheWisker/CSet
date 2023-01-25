@@ -1,4 +1,4 @@
-.TH "include/set.h" 3 "Sun Jan 22 2023" "CSet++" \" -*- nroff -*-
+.TH "include/set.h" 3 "Wed Jan 25 2023" "CSet++" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,6 +7,8 @@ include/set.h \- This is the main header file of the cset library\&. It contains
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <algorithm>\fP
+.br
 \fC#include <vector>\fP
 .br
 
@@ -34,7 +36,59 @@ include/set.h \- This is the main header file of the cset library\&. It contains
 .br
 .RI "Removes duplicates from a set\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::unique\fP (std::vector< T > &k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::unique\fP (std::vector< T > &&k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::sort\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::sort\fP (std::vector< T > &k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::sort\fP (std::vector< T > &&k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::rsort\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::rsort\fP (std::vector< T > &k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::rsort\fP (std::vector< T > &&k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::reverse\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBset::reverse\fP (std::vector< T > &k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::reverse\fP (std::vector< T > &&k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBset::sunion\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::sunion\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::sunion\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
 .br
 .RI "Obtains the set theory union of two sets\&. "
 .ti -1c
@@ -42,11 +96,35 @@ include/set.h \- This is the main header file of the cset library\&. It contains
 .br
 .RI "Obtains the set theory intersection of two sets\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > \fBset::intersection\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::intersection\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBset::diff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
 .br
 .RI "Obtains the set theory difference of two sets\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > \fBset::diff\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::diff\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBset::sdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::sdiff\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBset::sdiff\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
 .br
 .RI "Obtains the set theory symmetric difference of two sets\&. "
 .in -1c

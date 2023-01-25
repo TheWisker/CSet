@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="73" column="29" bodyfile="include/set.h" bodystart="136" bodyend="139" declfile="include/set.h" declline="73" declcolumn="29"/>
+        <location file="include/set.h" line="74" column="29" bodyfile="include/set.h" bodystart="300" bodyend="303" declfile="include/set.h" declline="74" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1ac5365eb686589aa9064bab275539177a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="82" column="28" bodyfile="include/set.h" bodystart="143" bodyend="147" declfile="include/set.h" declline="82" declcolumn="28"/>
+        <location file="include/set.h" line="83" column="28" bodyfile="include/set.h" bodystart="307" bodyend="311" declfile="include/set.h" declline="83" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -174,8 +174,541 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="91" column="36" bodyfile="include/set.h" bodystart="151" bodyend="154" declfile="include/set.h" declline="91" declcolumn="36"/>
-        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+        <location file="include/set.h" line="92" column="36" bodyfile="include/set.h" bodystart="315" bodyend="318" declfile="include/set.h" declline="92" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="300" endline="303">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1aa0f28078b1f7e11db59369c36f07e232" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::unique</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>unique</name>
+        <qualifiedname>set::unique</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Removes duplicates from a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="100" column="36" bodyfile="include/set.h" bodystart="322" bodyend="327" declfile="include/set.h" declline="100" declcolumn="36"/>
+        <references refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" compoundref="set_8h" startline="315" endline="318">unique</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a3bf08e7886ae166e35bc5823bd0108c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::unique</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k)</argsstring>
+        <name>unique</name>
+        <qualifiedname>set::unique</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Removes duplicates from a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rvalue set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="108" column="36" bodyfile="include/set.h" bodystart="331" bodyend="335" declfile="include/set.h" declline="108" declcolumn="36"/>
+        <references refid="namespaceset_1ac883181c654d551576c3ee2d1a0fa7fa" compoundref="set_8h" startline="315" endline="318">unique</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1acd71ed889f217fdd2ed230a7af7239b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::sort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>sort</name>
+        <qualifiedname>set::sort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in ascending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="117" column="36" bodyfile="include/set.h" bodystart="339" bodyend="343" declfile="include/set.h" declline="117" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ab56c2eb27a6ca1608fcaca498bb469c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::sort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>sort</name>
+        <qualifiedname>set::sort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in ascending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="125" column="36" bodyfile="include/set.h" bodystart="347" bodyend="350" declfile="include/set.h" declline="125" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1aa471bbd83d3f4218c46fbdd911036003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::sort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k)</argsstring>
+        <name>sort</name>
+        <qualifiedname>set::sort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in ascending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rvalue set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="133" column="36" bodyfile="include/set.h" bodystart="354" bodyend="357" declfile="include/set.h" declline="133" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ac064d67f787dd20fcfbd46cbf4e7717c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::rsort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>rsort</name>
+        <qualifiedname>set::rsort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in descending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="142" column="36" bodyfile="include/set.h" bodystart="361" bodyend="365" declfile="include/set.h" declline="142" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a36984d54610ebb1926243864141934c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::rsort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>rsort</name>
+        <qualifiedname>set::rsort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in descending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="150" column="36" bodyfile="include/set.h" bodystart="369" bodyend="372" declfile="include/set.h" declline="150" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1af76b38d3248072064d37e0abfb6d99de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::rsort</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k)</argsstring>
+        <name>rsort</name>
+        <qualifiedname>set::rsort</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Sorts a set in descending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rvalue set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="158" column="36" bodyfile="include/set.h" bodystart="376" bodyend="379" declfile="include/set.h" declline="158" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1acea3595093efb07e1bc491fd2d9ed303" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::reverse</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;c, const std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>reverse</name>
+        <qualifiedname>set::reverse</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Reverses the passed set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set on which to store the results. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector c.2 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="167" column="36" bodyfile="include/set.h" bodystart="383" bodyend="387" declfile="include/set.h" declline="167" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1ab913282f766e96ea5e334f25c7ce1c8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; set::reverse</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;k)</argsstring>
+        <name>reverse</name>
+        <qualifiedname>set::reverse</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Reverses the passed set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;&amp;) A reference to the passed vector k. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="175" column="36" bodyfile="include/set.h" bodystart="391" bodyend="394" declfile="include/set.h" declline="175" declcolumn="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a378e8ea58f8e5746692d9c911b36968c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::reverse</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k)</argsstring>
+        <name>reverse</name>
+        <qualifiedname>set::reverse</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Reverses the passed set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rvalue set which is to be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="183" column="36" bodyfile="include/set.h" bodystart="398" bodyend="401" declfile="include/set.h" declline="183" declcolumn="36"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -244,8 +777,123 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="101" column="36" bodyfile="include/set.h" bodystart="158" bodyend="162" declfile="include/set.h" declline="101" declcolumn="36"/>
-        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+        <location file="include/set.h" line="193" column="36" bodyfile="include/set.h" bodystart="405" bodyend="409" declfile="include/set.h" declline="193" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="300" endline="303">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a4ed87ed055788fd8d140f6a319a40c52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::sunion</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>sunion</name>
+        <qualifiedname>set::sunion</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory union of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A rvalue set that contains the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="202" column="36" bodyfile="include/set.h" bodystart="413" bodyend="417" declfile="include/set.h" declline="202" declcolumn="36"/>
+        <references refid="namespaceset_1ad0fdcd2362fa264e9d23cba85ccec05c" compoundref="set_8h" startline="405" endline="409">sunion</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a0e3e720e169b3cbea702da06e7241494" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::sunion</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k, const std::vector&lt; T &gt; &amp;&amp;kk)</argsstring>
+        <name>sunion</name>
+        <qualifiedname>set::sunion</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory union of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="211" column="36" declfile="include/set.h" declline="211" declcolumn="36"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1abbfdb13d235a0b18b76350266fe35645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -314,8 +962,123 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="111" column="36" bodyfile="include/set.h" bodystart="166" bodyend="170" declfile="include/set.h" declline="111" declcolumn="36"/>
-        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+        <location file="include/set.h" line="221" column="36" bodyfile="include/set.h" bodystart="429" bodyend="433" declfile="include/set.h" declline="221" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="300" endline="303">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a937da7a049b9728f41cdd28143fc8aab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::intersection</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>intersection</name>
+        <qualifiedname>set::intersection</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory intersection of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A rvalue set that contains the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="230" column="36" bodyfile="include/set.h" bodystart="437" bodyend="441" declfile="include/set.h" declline="230" declcolumn="36"/>
+        <references refid="namespaceset_1abbfdb13d235a0b18b76350266fe35645" compoundref="set_8h" startline="429" endline="433">intersection</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a9bf96dd651d61262a4aacebd188f6677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::intersection</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k, const std::vector&lt; T &gt; &amp;&amp;kk)</argsstring>
+        <name>intersection</name>
+        <qualifiedname>set::intersection</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory intersection of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="239" column="36" declfile="include/set.h" declline="239" declcolumn="36"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -384,8 +1147,123 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="121" column="36" bodyfile="include/set.h" bodystart="174" bodyend="177" declfile="include/set.h" declline="121" declcolumn="36"/>
-        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="136" endline="139">contains</references>
+        <location file="include/set.h" line="249" column="36" bodyfile="include/set.h" bodystart="453" bodyend="456" declfile="include/set.h" declline="249" declcolumn="36"/>
+        <references refid="namespaceset_1a980a97ee29ca68fb5b0ff49c22317a7e" compoundref="set_8h" startline="300" endline="303">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1adab78d19090efa67608f5bdf7edfcd17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::diff</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>diff</name>
+        <qualifiedname>set::diff</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A rvalue set that contains the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="258" column="36" bodyfile="include/set.h" bodystart="460" bodyend="464" declfile="include/set.h" declline="258" declcolumn="36"/>
+        <references refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" compoundref="set_8h" startline="453" endline="456">diff</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a33807611580dac21eeb1d4629635d571" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::diff</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k, const std::vector&lt; T &gt; &amp;&amp;kk)</argsstring>
+        <name>diff</name>
+        <qualifiedname>set::diff</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="267" column="36" declfile="include/set.h" declline="267" declcolumn="36"/>
       </memberdef>
       <memberdef kind="function" id="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -454,8 +1332,123 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/set.h" line="131" column="36" bodyfile="include/set.h" bodystart="181" bodyend="185" declfile="include/set.h" declline="131" declcolumn="36"/>
-        <references refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" compoundref="set_8h" startline="174" endline="177">diff</references>
+        <location file="include/set.h" line="277" column="36" bodyfile="include/set.h" bodystart="476" bodyend="480" declfile="include/set.h" declline="277" declcolumn="36"/>
+        <references refid="namespaceset_1a37f2c9c18fda658d3fb86550e519e773" compoundref="set_8h" startline="453" endline="456">diff</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1aadf61b4b009c85eedfebcd324744433b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::sdiff</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;k, const std::vector&lt; T &gt; &amp;kk)</argsstring>
+        <name>sdiff</name>
+        <qualifiedname>set::sdiff</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory symmetric difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A rvalue set that contains the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="286" column="36" bodyfile="include/set.h" bodystart="484" bodyend="488" declfile="include/set.h" declline="286" declcolumn="36"/>
+        <references refid="namespaceset_1a9e1d205dc88719374276b5bd73fc13b6" compoundref="set_8h" startline="476" endline="480">sdiff</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceset_1a2ef17eb00844ef043ce1ddeba457037c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt; T &gt; set::sdiff</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;k, const std::vector&lt; T &gt; &amp;&amp;kk)</argsstring>
+        <name>sdiff</name>
+        <qualifiedname>set::sdiff</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>kk</declname>
+        </param>
+        <briefdescription>
+<para>Obtains the set theory symmetric difference of two sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The type of the elements in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second rvalue input set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(std::vector&lt;T&gt;) A new vector with the results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/set.h" line="295" column="36" declfile="include/set.h" declline="295" declcolumn="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -464,6 +1457,6 @@
     <detaileddescription>
 <para>The set namespace contains functions for performing common set operations on std::vector, such as checking if an element is present, counting the number of occurrences, and performing union, intersection, difference and symmetric difference operations. </para>
     </detaileddescription>
-    <location file="include/set.h" line="59" column="1"/>
+    <location file="include/set.h" line="60" column="1"/>
   </compounddef>
 </doxygen>

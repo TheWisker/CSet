@@ -115,7 +115,7 @@ References <link linkend="_benchmark_2set_8cpp_source_1l00023">print()</link>.</
 <para>
 Definition at line <link linkend="_benchmark_2set_8cpp_source_1l00063">63</link> of file <link linkend="_benchmark_2set_8cpp_source">set.cpp</link>.</para>
 <para>
-References <link linkend="_benchmark_2set_8cpp_source_1l00043">benchmark()</link>, <link linkend="_set_8h_source_1l00136">set::contains()</link>, <link linkend="_set_8h_source_1l00143">set::count()</link>, <link linkend="_set_8h_source_1l00174">set::diff()</link>, <link linkend="_set_8h_source_1l00166">set::intersection()</link>, <link linkend="_set_8h_source_1l00181">set::sdiff()</link>, <link linkend="_set_8h_source_1l00158">set::sunion()</link>, and <link linkend="_set_8h_source_1l00151">set::unique()</link>.</para>
+References <link linkend="_benchmark_2set_8cpp_source_1l00043">benchmark()</link>, <link linkend="_set_8h_source_1l00300">set::contains()</link>, <link linkend="_set_8h_source_1l00307">set::count()</link>, <link linkend="_set_8h_source_1l00453">set::diff()</link>, <link linkend="_set_8h_source_1l00429">set::intersection()</link>, <link linkend="_set_8h_source_1l00383">set::reverse()</link>, <link linkend="_set_8h_source_1l00361">set::rsort()</link>, <link linkend="_set_8h_source_1l00476">set::sdiff()</link>, <link linkend="_set_8h_source_1l00339">set::sort()</link>, <link linkend="_set_8h_source_1l00405">set::sunion()</link>, and <link linkend="_set_8h_source_1l00315">set::unique()</link>.</para>
 </section>
 <anchor xml:id="_benchmark_2set_8cpp_1ab303d4247db74cc19619552567daa6a4"/><section>
     <title>print()</title>

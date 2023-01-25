@@ -88,7 +88,7 @@ Definition at line \mbox{\hyperlink{benchmark_2set_8cpp_source_l00063}{63}} of f
 
 
 
-References \mbox{\hyperlink{benchmark_2set_8cpp_source_l00043}{benchmark()}}, \mbox{\hyperlink{set_8h_source_l00136}{set\+::contains()}}, \mbox{\hyperlink{set_8h_source_l00143}{set\+::count()}}, \mbox{\hyperlink{set_8h_source_l00174}{set\+::diff()}}, \mbox{\hyperlink{set_8h_source_l00166}{set\+::intersection()}}, \mbox{\hyperlink{set_8h_source_l00181}{set\+::sdiff()}}, \mbox{\hyperlink{set_8h_source_l00158}{set\+::sunion()}}, and \mbox{\hyperlink{set_8h_source_l00151}{set\+::unique()}}.
+References \mbox{\hyperlink{benchmark_2set_8cpp_source_l00043}{benchmark()}}, \mbox{\hyperlink{set_8h_source_l00300}{set\+::contains()}}, \mbox{\hyperlink{set_8h_source_l00307}{set\+::count()}}, \mbox{\hyperlink{set_8h_source_l00453}{set\+::diff()}}, \mbox{\hyperlink{set_8h_source_l00429}{set\+::intersection()}}, \mbox{\hyperlink{set_8h_source_l00383}{set\+::reverse()}}, \mbox{\hyperlink{set_8h_source_l00361}{set\+::rsort()}}, \mbox{\hyperlink{set_8h_source_l00476}{set\+::sdiff()}}, \mbox{\hyperlink{set_8h_source_l00339}{set\+::sort()}}, \mbox{\hyperlink{set_8h_source_l00405}{set\+::sunion()}}, and \mbox{\hyperlink{set_8h_source_l00315}{set\+::unique()}}.
 
 \mbox{\Hypertarget{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}\label{benchmark_2set_8cpp_ab303d4247db74cc19619552567daa6a4}} 
 \index{set.cpp@{set.cpp}!print@{print}}

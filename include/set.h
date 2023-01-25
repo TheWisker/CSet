@@ -53,6 +53,7 @@
 * @details This file contains a set of functions that perform set theory operations on std::vector.\n
 * The functions are implemented as templates to support multiple types without the need to overload each function for each type.
 **/
+#include <algorithm>
 #include <vector>
 #pragma once
 /** 
@@ -89,6 +90,97 @@ namespace set {
     * @return (std::vector<T>&) A reference to the passed vector c.
     **/
     template <typename T> inline std::vector<T>& unique(std::vector<T>& c, const std::vector<T>& k); //Set unique
+
+    /**
+    * @brief Removes duplicates from a set
+    * @tparam T - The type of the elements in the set.
+    * @param k The set which is to be modified.
+    * @return (std::vector<T>&) A reference to the passed vector k.
+    **/
+    template <typename T> inline std::vector<T>& unique(std::vector<T>& k); //Set overloaded unique
+
+    /**
+    * @brief Removes duplicates from a set
+    * @tparam T - The type of the elements in the set.
+    * @param k The rvalue set which is to be modified.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> unique(std::vector<T>&& k); //Set overloaded rvalue unique
+
+    /**
+    * @brief Sorts a set in ascending order
+    * @tparam T - The type of the elements in the set.
+    * @param c The set on which to store the results.
+    * @param k The input set.
+    * @return (std::vector<T>&) A reference to the passed vector c.
+    **/
+    template <typename T> inline std::vector<T>& sort(std::vector<T>& c, const std::vector<T>& k); //Set sort
+
+    /**
+    * @brief Sorts a set in ascending order
+    * @tparam T - The type of the elements in the set.
+    * @param k The set which is to be modified.
+    * @return (std::vector<T>&) A reference to the passed vector k.
+    **/
+    template <typename T> inline std::vector<T>& sort(std::vector<T>& k); //Set overloaded sort
+
+    /**
+    * @brief Sorts a set in ascending order
+    * @tparam T - The type of the elements in the set.
+    * @param k The rvalue set which is to be modified.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> sort(std::vector<T>&& k); //Set overloaded rvalue sort
+
+    /**
+    * @brief Sorts a set in descending order
+    * @tparam T - The type of the elements in the set.
+    * @param c The set on which to store the results.
+    * @param k The input set.
+    * @return (std::vector<T>&) A reference to the passed vector c.
+    **/
+    template <typename T> inline std::vector<T>& rsort(std::vector<T>& c, const std::vector<T>& k); //Set reverse sort
+
+    /**
+    * @brief Sorts a set in descending order
+    * @tparam T - The type of the elements in the set.
+    * @param k The set which is to be modified.
+    * @return (std::vector<T>&) A reference to the passed vector k.
+    **/
+    template <typename T> inline std::vector<T>& rsort(std::vector<T>& k); //Set overloaded reverse sort
+
+    /**
+    * @brief Sorts a set in descending order
+    * @tparam T - The type of the elements in the set.
+    * @param k The rvalue set which is to be modified.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> rsort(std::vector<T>&& k); //Set overloaded rvalue reverse sort
+
+    /**
+    * @brief Reverses the passed set
+    * @tparam T - The type of the elements in the set.
+    * @param c The set on which to store the results.
+    * @param k The input set.
+    * @return (std::vector<T>&) A reference to the passed vector c.2
+    **/
+    template <typename T> inline std::vector<T>& reverse(std::vector<T>& c, const std::vector<T>& k); //Set reverse
+
+    /**
+    * @brief Reverses the passed set
+    * @tparam T - The type of the elements in the set.
+    * @param k The set which is to be modified.
+    * @return (std::vector<T>&) A reference to the passed vector k.
+    **/
+    template <typename T> inline std::vector<T>& reverse(std::vector<T>& k); //Set overloaded reverse
+
+    /**
+    * @brief Reverses the passed set
+    * @tparam T - The type of the elements in the set.
+    * @param k The rvalue set which is to be modified.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> reverse(std::vector<T>&& k); //Set overloaded rvalue reverse
     
     /**
     * @brief Obtains the set theory union of two sets
@@ -101,6 +193,24 @@ namespace set {
     template <typename T> inline std::vector<T>& sunion(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Union
 
     /**
+    * @brief Obtains the set theory union of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first input set.
+    * @param kk The second input set.
+    * @return (std::vector<T>) A rvalue set that contains the results.
+    **/
+    template <typename T> inline std::vector<T> sunion(const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Overloaded Union
+
+    /**
+    * @brief Obtains the set theory union of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first rvalue input set.
+    * @param kk The second rvalue input set.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> sunion(std::vector<T>&& k, const std::vector<T>&& kk); //Set theory: Overloaded Rvalue Union
+
+    /**
     * @brief Obtains the set theory intersection of two sets
     * @tparam T - The type of the elements in the set.
     * @param c The set on which to store the results.
@@ -109,6 +219,24 @@ namespace set {
     * @return (std::vector<T>&) A reference to the passed vector c.
     **/
     template <typename T> inline std::vector<T>& intersection(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Intersection
+
+    /**
+    * @brief Obtains the set theory intersection of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first input set.
+    * @param kk The second input set.
+    * @return (std::vector<T>) A rvalue set that contains the results.
+    **/
+    template <typename T> inline std::vector<T> intersection(const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Overloaded Intersection
+
+    /**
+    * @brief Obtains the set theory intersection of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first rvalue input set.
+    * @param kk The second rvalue input set.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> intersection(std::vector<T>&& k, const std::vector<T>&& kk); //Set theory: Overloaded Rvalue Intersection
 
     /**
     * @brief Obtains the set theory difference of two sets
@@ -121,6 +249,24 @@ namespace set {
     template <typename T> inline std::vector<T>& diff(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Difference
 
     /**
+    * @brief Obtains the set theory difference of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first input set.
+    * @param kk The second input set.
+    * @return (std::vector<T>) A rvalue set that contains the results.
+    **/
+    template <typename T> inline std::vector<T> diff(const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Overloaded Difference
+
+    /**
+    * @brief Obtains the set theory difference of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first rvalue input set.
+    * @param kk The second rvalue input set.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> diff(std::vector<T>&& k, const std::vector<T>&& kk); //Set theory: Overloaded Rvalue Difference
+
+    /**
     * @brief Obtains the set theory symmetric difference of two sets
     * @tparam T - The type of the elements in the set.
     * @param c The set on which to store the results.
@@ -129,6 +275,24 @@ namespace set {
     * @return (std::vector<T>&) A reference to the passed vector c.
     **/
     template <typename T> inline std::vector<T>& sdiff(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Symmetric difference
+
+    /**
+    * @brief Obtains the set theory symmetric difference of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first input set.
+    * @param kk The second input set.
+    * @return (std::vector<T>) A rvalue set that contains the results.
+    **/
+    template <typename T> inline std::vector<T> sdiff(const std::vector<T>& k, const std::vector<T>& kk); //Set theory: Overloaded Symmetric difference
+
+    /**
+    * @brief Obtains the set theory symmetric difference of two sets
+    * @tparam T - The type of the elements in the set.
+    * @param k The first rvalue input set.
+    * @param kk The second rvalue input set.
+    * @return (std::vector<T>) A new vector with the results.
+    **/
+    template <typename T> inline std::vector<T> sdiff(std::vector<T>&& k, const std::vector<T>&& kk); //Set theory: Overloaded Rvalue Symmetric difference
 }
 
 //Set contains
@@ -153,12 +317,111 @@ inline std::vector<T>& set::unique(std::vector<T>& c, const std::vector<T>& k) {
     return c;
 };
 
+//Set overloaded unique
+template <typename T>
+inline std::vector<T>& set::unique(std::vector<T>& k) {
+    std::vector<T> t;
+    set::unique(t, k);
+    k = std::move(t);
+    return k;
+};
+
+//Set overloaded rvalue unique
+template <typename T>
+inline std::vector<T> set::unique(std::vector<T>&& k) {
+    std::vector<T> t;
+    set::unique(t, k);
+    return t;
+};
+
+//Set sort
+template <typename T>
+inline std::vector<T>& set::sort(std::vector<T>& c, const std::vector<T>& k) {
+    c = k;
+    std::sort(c.begin(), c.end());
+    return c;
+}
+
+//Set overloaded sort
+template <typename T>
+inline std::vector<T>& set::sort(std::vector<T>& k) {
+    std::sort(k.begin(), k.end());
+    return k;
+}
+
+//Set overloaded rvalue sort
+template <typename T>
+inline std::vector<T> set::sort(std::vector<T>&& k) {
+    std::sort(k.begin(), k.end());
+    return k;
+}
+
+//Set reverse sort
+template <typename T>
+inline std::vector<T>& set::rsort(std::vector<T>& c, const std::vector<T>& k) {
+    c = k;
+    std::sort(c.begin(), c.end(), std::greater<T>());
+    return c;
+}
+
+//Set overloaded reverse sort
+template <typename T>
+inline std::vector<T>& set::rsort(std::vector<T>& k) {
+    std::sort(k.begin(), k.end(), std::greater<T>());
+    return k;
+}
+
+//Set overloaded rvalue everse sort
+template <typename T>
+inline std::vector<T> set::rsort(std::vector<T>&& k) {
+    std::sort(k.begin(), k.end(), std::greater<T>());
+    return k;
+}
+
+//Set reverse
+template <typename T>
+inline std::vector<T>& set::reverse(std::vector<T>& c, const std::vector<T>& k) {
+    c = k;
+    for (unsigned int i = 0; i < (k.size() / 2); i++) {std::swap(c[i], c[c.size() - i - 1]);}
+    return c;
+};
+
+//Set overloaded reverse
+template <typename T>
+inline std::vector<T>& set::reverse(std::vector<T>& k) {
+    for (unsigned int i = 0; i < (k.size() / 2); i++) {std::swap(k[i], k[k.size() - i - 1]);}
+    return k;
+};
+
+//Set overloaded rvalue reverse
+template <typename T>
+inline std::vector<T> set::reverse(std::vector<T>&& k) {
+    for (unsigned int i = 0; i < (k.size() / 2); i++) {std::swap(k[i], k[k.size() - i - 1]);}
+    return k;
+};
+
 //Set theory: Union
 template <typename T>
 inline std::vector<T>& set::sunion(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk) {
     for (const T& v: k) {if(!set::contains(c, v)) {c.push_back(v);}}
     for (const T& vv: kk) {if(!set::contains(c, vv)) {c.push_back(vv);}}
     return c;
+};
+
+//Set theory: Overloaded Union
+template <typename T>
+inline std::vector<T> set::sunion(const std::vector<T>& k, const std::vector<T>& kk) {
+    std::vector<T> r;
+    set::sunion(r, k, kk);
+    return r;
+};
+
+//Set theory: Overloaded Rvalue Union
+template <typename T>
+inline std::vector<T> set::sunion(std::vector<T>&& k, std::vector<T>&& kk) {
+    std::vector<T> r;
+    set::sunion(r, k, kk);
+    return r;
 };
 
 //Set theory: Intersection
@@ -169,11 +432,43 @@ inline std::vector<T>& set::intersection(std::vector<T>& c, const std::vector<T>
     return c;
 };
 
+//Set theory: Overloaded Intersection
+template <typename T>
+inline std::vector<T> set::intersection(const std::vector<T>& k, const std::vector<T>& kk) {
+    std::vector<T> r;
+    set::intersection(r, k, kk);
+    return r;
+};
+
+//Set theory: Overloaded Rvalue Intersection
+template <typename T>
+inline std::vector<T> set::intersection(std::vector<T>&& k, std::vector<T>&& kk) {
+    std::vector<T> r;
+    set::intersection(r, k, kk);
+    return r;
+};
+
 //Set theory: Difference
 template <typename T>
 inline std::vector<T>& set::diff(std::vector<T>& c, const std::vector<T>& k, const std::vector<T>& kk) {
     for (const T& v: k) {if(!contains(kk, v)) {c.push_back(v);}}
     return c;
+};
+
+//Set theory: Overloaded Difference
+template <typename T>
+inline std::vector<T> set::diff(const std::vector<T>& k, const std::vector<T>& kk) {
+    std::vector<T> r;
+    set::diff(r, k, kk);
+    return r;
+};
+
+//Set theory: Overloaded Rvalue Difference
+template <typename T>
+inline std::vector<T> set::diff(std::vector<T>&& k, std::vector<T>&& kk) {
+    std::vector<T> r;
+    set::diff(r, k, kk);
+    return r;
 };
 
 //Set theory: Symmetric difference
@@ -182,4 +477,20 @@ inline std::vector<T>& set::sdiff(std::vector<T>& c, const std::vector<T>& k, co
     set::diff(c, k, kk);
     set::diff(c, kk, k);
     return c;
+};
+
+//Set theory: Overloaded Symmetric difference
+template <typename T>
+inline std::vector<T> set::sdiff(const std::vector<T>& k, const std::vector<T>& kk) {
+    std::vector<T> r;
+    set::sdiff(r, k, kk);
+    return r;
+};
+
+//Set theory: Overloaded Rvalue Symmetric difference
+template <typename T>
+inline std::vector<T> set::sdiff(std::vector<T>&& k, std::vector<T>&& kk) {
+    std::vector<T> r;
+    set::sdiff(r, k, kk);
+    return r;
 };

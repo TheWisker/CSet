@@ -1,4 +1,4 @@
-.TH "set" 3 "Sun Jan 22 2023" "CSet++" \" -*- nroff -*-
+.TH "set" 3 "Wed Jan 25 2023" "CSet++" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,7 +23,59 @@ set \- Contains all the functions for performing set operations on std::vector\&
 .br
 .RI "Removes duplicates from a set\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > & \fBunique\fP (std::vector< T > &k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBunique\fP (std::vector< T > &&k)"
+.br
+.RI "Removes duplicates from a set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBsort\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBsort\fP (std::vector< T > &k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBsort\fP (std::vector< T > &&k)"
+.br
+.RI "Sorts a set in ascending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBrsort\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBrsort\fP (std::vector< T > &k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBrsort\fP (std::vector< T > &&k)"
+.br
+.RI "Sorts a set in descending order\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBreverse\fP (std::vector< T > &c, const std::vector< T > &k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > & \fBreverse\fP (std::vector< T > &k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBreverse\fP (std::vector< T > &&k)"
+.br
+.RI "Reverses the passed set\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBsunion\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBsunion\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory union of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBsunion\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
 .br
 .RI "Obtains the set theory union of two sets\&. "
 .ti -1c
@@ -31,11 +83,35 @@ set \- Contains all the functions for performing set operations on std::vector\&
 .br
 .RI "Obtains the set theory intersection of two sets\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > \fBintersection\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBintersection\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
+.br
+.RI "Obtains the set theory intersection of two sets\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
 .br
 .RI "Obtains the set theory difference of two sets\&. "
 .ti -1c
+.RI "template<typename T > std::vector< T > \fBdiff\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBdiff\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
+.br
+.RI "Obtains the set theory difference of two sets\&. "
+.ti -1c
 .RI "template<typename T > std::vector< T > & \fBsdiff\fP (std::vector< T > &c, const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBsdiff\fP (const std::vector< T > &k, const std::vector< T > &kk)"
+.br
+.RI "Obtains the set theory symmetric difference of two sets\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBsdiff\fP (std::vector< T > &&k, const std::vector< T > &&kk)"
 .br
 .RI "Obtains the set theory symmetric difference of two sets\&. "
 .in -1c
@@ -72,7 +148,7 @@ Checks if an element is present in the set\&.
 .PP
 
 .PP
-Definition at line \fB136\fP of file \fBset\&.h\fP\&.
+Definition at line \fB300\fP of file \fBset\&.h\fP\&.
 .SS "template<typename T > int set::count (const std::vector< T > & k, const T & kk)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
@@ -97,7 +173,57 @@ Counts the number of times an element is present in the set\&.
 .PP
 
 .PP
-Definition at line \fB143\fP of file \fBset\&.h\fP\&.
+Definition at line \fB307\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > set::diff (const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A rvalue set that contains the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB460\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBdiff()\fP\&.
+.SS "template<typename T > std::vector< T > set::diff (std::vector< T > && k, const std::vector< T > && kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first rvalue input set\&. 
+.br
+\fIkk\fP The second rvalue input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
 .SS "template<typename T > std::vector< T > & set::diff (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
 
 .PP
@@ -124,9 +250,59 @@ Obtains the set theory difference of two sets\&.
 .PP
 
 .PP
-Definition at line \fB174\fP of file \fBset\&.h\fP\&.
+Definition at line \fB453\fP of file \fBset\&.h\fP\&.
 .PP
 References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > set::intersection (const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory intersection of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A rvalue set that contains the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB437\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBintersection()\fP\&.
+.SS "template<typename T > std::vector< T > set::intersection (std::vector< T > && k, const std::vector< T > && kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory intersection of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first rvalue input set\&. 
+.br
+\fIkk\fP The second rvalue input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
 .SS "template<typename T > std::vector< T > & set::intersection (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
 
 .PP
@@ -153,9 +329,201 @@ Obtains the set theory intersection of two sets\&.
 .PP
 
 .PP
-Definition at line \fB166\fP of file \fBset\&.h\fP\&.
+Definition at line \fB429\fP of file \fBset\&.h\fP\&.
 .PP
 References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > set::reverse (std::vector< T > && k)\fC [inline]\fP"
+
+.PP
+Reverses the passed set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The rvalue set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB398\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::reverse (std::vector< T > & c, const std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Reverses the passed set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&.2 
+.RE
+.PP
+
+.PP
+Definition at line \fB383\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::reverse (std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Reverses the passed set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB391\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > set::rsort (std::vector< T > && k)\fC [inline]\fP"
+
+.PP
+Sorts a set in descending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The rvalue set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB376\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::rsort (std::vector< T > & c, const std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Sorts a set in descending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB361\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::rsort (std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Sorts a set in descending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB369\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > set::sdiff (const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory symmetric difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A rvalue set that contains the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB484\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBsdiff()\fP\&.
+.SS "template<typename T > std::vector< T > set::sdiff (std::vector< T > && k, const std::vector< T > && kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory symmetric difference of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first rvalue input set\&. 
+.br
+\fIkk\fP The second rvalue input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
 .SS "template<typename T > std::vector< T > & set::sdiff (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
 
 .PP
@@ -182,9 +550,130 @@ Obtains the set theory symmetric difference of two sets\&.
 .PP
 
 .PP
-Definition at line \fB181\fP of file \fBset\&.h\fP\&.
+Definition at line \fB476\fP of file \fBset\&.h\fP\&.
 .PP
 References \fBdiff()\fP\&.
+.SS "template<typename T > std::vector< T > set::sort (std::vector< T > && k)\fC [inline]\fP"
+
+.PP
+Sorts a set in ascending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The rvalue set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB354\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::sort (std::vector< T > & c, const std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Sorts a set in ascending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The set on which to store the results\&. 
+.br
+\fIk\fP The input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector c\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB339\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > & set::sort (std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Sorts a set in ascending order\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB347\fP of file \fBset\&.h\fP\&.
+.SS "template<typename T > std::vector< T > set::sunion (const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory union of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first input set\&. 
+.br
+\fIkk\fP The second input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A rvalue set that contains the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB413\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBsunion()\fP\&.
+.SS "template<typename T > std::vector< T > set::sunion (std::vector< T > && k, const std::vector< T > && kk)\fC [inline]\fP"
+
+.PP
+Obtains the set theory union of two sets\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The first rvalue input set\&. 
+.br
+\fIkk\fP The second rvalue input set\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
 .SS "template<typename T > std::vector< T > & set::sunion (std::vector< T > & c, const std::vector< T > & k, const std::vector< T > & kk)\fC [inline]\fP"
 
 .PP
@@ -211,9 +700,34 @@ Obtains the set theory union of two sets\&.
 .PP
 
 .PP
-Definition at line \fB158\fP of file \fBset\&.h\fP\&.
+Definition at line \fB405\fP of file \fBset\&.h\fP\&.
 .PP
 References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > set::unique (std::vector< T > && k)\fC [inline]\fP"
+
+.PP
+Removes duplicates from a set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The rvalue set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>) A new vector with the results\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB331\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBunique()\fP\&.
 .SS "template<typename T > std::vector< T > & set::unique (std::vector< T > & c, const std::vector< T > & k)\fC [inline]\fP"
 
 .PP
@@ -238,9 +752,34 @@ Removes duplicates from a set\&.
 .PP
 
 .PP
-Definition at line \fB151\fP of file \fBset\&.h\fP\&.
+Definition at line \fB315\fP of file \fBset\&.h\fP\&.
 .PP
 References \fBcontains()\fP\&.
+.SS "template<typename T > std::vector< T > & set::unique (std::vector< T > & k)\fC [inline]\fP"
+
+.PP
+Removes duplicates from a set\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP - The type of the elements in the set\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP The set which is to be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+(std::vector<T>&) A reference to the passed vector k\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB322\fP of file \fBset\&.h\fP\&.
+.PP
+References \fBunique()\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CSet++ from the source code\&.

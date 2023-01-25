@@ -306,6 +306,902 @@ $doxydocs=
           },
           {
             kind => 'function',
+            name => 'unique',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Removes duplicates from a set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'unique',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Removes duplicates from a set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c.2 '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
             name => 'sunion',
             virtualness => 'non_virtual',
             protection => 'public',
@@ -318,6 +1214,314 @@ $doxydocs=
                 {
                   type => 'text',
                   content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sunion',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sunion',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'intersection',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory intersection of two sets. '
                 }
               ]
             },
@@ -464,6 +1668,198 @@ $doxydocs=
                     {
                       parameters => [
                         {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'intersection',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory intersection of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'diff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
                           name => 'c'
                         }
                       ],
@@ -550,6 +1946,198 @@ $doxydocs=
                 {
                   type => 'text',
                   content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'diff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sdiff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory symmetric difference of two sets. '
                 }
               ]
             },
@@ -696,26 +2284,10 @@ $doxydocs=
                     {
                       parameters => [
                         {
-                          name => 'c'
-                        }
-                      ],
-                      doc => [
-                        {
-                          type => 'text',
-                          content => 'The set on which to store the results. '
-                        }
-                      ]
-                    },
-                    {
-                      parameters => [
-                        {
                           name => 'k'
                         }
                       ],
                       doc => [
-                        {
-                          type => 'parbreak'
-                        },
                         {
                           type => 'text',
                           content => 'The first input set. '
@@ -744,20 +2316,16 @@ $doxydocs=
                   return => [
                     {
                       type => 'text',
-                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
                     }
                   ]
                 }
               ]
             },
-            type => 'std::vector< T > &',
+            type => 'std::vector< T >',
             const => 'no',
             volatile => 'no',
             parameters => [
-              {
-                declaration_name => 'c',
-                type => 'std::vector< T > &'
-              },
               {
                 declaration_name => 'k',
                 type => 'const std::vector< T > &'
@@ -765,6 +2333,102 @@ $doxydocs=
               {
                 declaration_name => 'kk',
                 type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sdiff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory symmetric difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
               }
             ]
           }
@@ -798,6 +2462,9 @@ $doxydocs=
     {
       name => 'set.h',
       includes => [
+        {
+          name => 'algorithm'
+        },
         {
           name => 'vector'
         }
@@ -1111,6 +2778,902 @@ $doxydocs=
           },
           {
             kind => 'function',
+            name => 'unique',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Removes duplicates from a set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'unique',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Removes duplicates from a set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in ascending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'rsort',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Sorts a set in descending order. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c.2 '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector k. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'reverse',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Reverses the passed set. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The rvalue set which is to be modified. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
             name => 'sunion',
             virtualness => 'non_virtual',
             protection => 'public',
@@ -1123,6 +3686,314 @@ $doxydocs=
                 {
                   type => 'text',
                   content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'c'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The set on which to store the results. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T > &',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'c',
+                type => 'std::vector< T > &'
+              },
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sunion',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sunion',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory union of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'intersection',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory intersection of two sets. '
                 }
               ]
             },
@@ -1269,6 +4140,198 @@ $doxydocs=
                     {
                       parameters => [
                         {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'intersection',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory intersection of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'diff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
                           name => 'c'
                         }
                       ],
@@ -1355,6 +4418,198 @@ $doxydocs=
                 {
                   type => 'text',
                   content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'const std::vector< T > &'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'diff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sdiff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory symmetric difference of two sets. '
                 }
               ]
             },
@@ -1501,26 +4756,10 @@ $doxydocs=
                     {
                       parameters => [
                         {
-                          name => 'c'
-                        }
-                      ],
-                      doc => [
-                        {
-                          type => 'text',
-                          content => 'The set on which to store the results. '
-                        }
-                      ]
-                    },
-                    {
-                      parameters => [
-                        {
                           name => 'k'
                         }
                       ],
                       doc => [
-                        {
-                          type => 'parbreak'
-                        },
                         {
                           type => 'text',
                           content => 'The first input set. '
@@ -1549,20 +4788,16 @@ $doxydocs=
                   return => [
                     {
                       type => 'text',
-                      content => '(std::vector<T>&) A reference to the passed vector c. '
+                      content => '(std::vector<T>) A rvalue set that contains the results. '
                     }
                   ]
                 }
               ]
             },
-            type => 'std::vector< T > &',
+            type => 'std::vector< T >',
             const => 'no',
             volatile => 'no',
             parameters => [
-              {
-                declaration_name => 'c',
-                type => 'std::vector< T > &'
-              },
               {
                 declaration_name => 'k',
                 type => 'const std::vector< T > &'
@@ -1570,6 +4805,102 @@ $doxydocs=
               {
                 declaration_name => 'kk',
                 type => 'const std::vector< T > &'
+              }
+            ]
+          },
+          {
+            kind => 'function',
+            name => 'sdiff',
+            virtualness => 'non_virtual',
+            protection => 'public',
+            static => 'no',
+            brief => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  type => 'text',
+                  content => 'Obtains the set theory symmetric difference of two sets. '
+                }
+              ]
+            },
+            detailed => {
+              doc => [
+                {
+                  type => 'parbreak'
+                },
+                {
+                  templateparam => [
+                    {
+                      parameters => [
+                        {
+                          name => 'T'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => '- The type of the elements in the set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  params => [
+                    {
+                      parameters => [
+                        {
+                          name => 'k'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'text',
+                          content => 'The first rvalue input set. '
+                        }
+                      ]
+                    },
+                    {
+                      parameters => [
+                        {
+                          name => 'kk'
+                        }
+                      ],
+                      doc => [
+                        {
+                          type => 'parbreak'
+                        },
+                        {
+                          type => 'text',
+                          content => 'The second rvalue input set. '
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  return => [
+                    {
+                      type => 'text',
+                      content => '(std::vector<T>) A new vector with the results. '
+                    }
+                  ]
+                }
+              ]
+            },
+            type => 'std::vector< T >',
+            const => 'no',
+            volatile => 'no',
+            parameters => [
+              {
+                declaration_name => 'k',
+                type => 'std::vector< T > &&'
+              },
+              {
+                declaration_name => 'kk',
+                type => 'const std::vector< T > &&'
               }
             ]
           }
