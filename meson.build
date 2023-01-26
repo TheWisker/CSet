@@ -1,4 +1,4 @@
-project('CSet++', 'cpp', version : '1.0.0')
+project('CSet++', 'cpp', version : '1.0.2')
 
 include = ['./include']
 header_files = ['./include/set.h']
@@ -38,11 +38,6 @@ benchmark('benchmarks', benchmark)
 #Install the documentation and create a target
 run_command('doxygen', 'doxygen.conf', check: true)
 install_man(files(man_files))
-
-#Release windows zip build target
-#win_build = meson.buildtype()
-#win_build.compiler('c')
-#win_build.linker('link')
 
 #Print a summary of the build
 summary('Project', 'CSet++')
