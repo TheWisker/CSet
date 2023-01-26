@@ -41,7 +41,7 @@ install_man(files(man_files))
 
 #Print a summary of the build
 summary('Project', 'CSet++')
-summary('Version', '1.0.0')
+summary('Version', '1.0.2')
 summary('Langs', 'C++')
 summary('Shared library', shlib.full_path())
 summary('Static library', stlib.full_path())
